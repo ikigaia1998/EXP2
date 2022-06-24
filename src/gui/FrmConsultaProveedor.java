@@ -27,6 +27,7 @@ import javax.swing.table.DefaultTableModel;
 import entidad.Proveedor;
 import model.ProveedorModel;
 import util.Excel;
+import javax.swing.ImageIcon;
 
 public class FrmConsultaProveedor extends JInternalFrame implements ActionListener {
 
@@ -56,7 +57,8 @@ public class FrmConsultaProveedor extends JInternalFrame implements ActionListen
 	int hoveredRow=-1,hoveredColumn=-1;
 	private JButton btnExportar;
 	public FrmConsultaProveedor() {
-		getContentPane().setBackground(new Color(153, 153, 255));
+		setFrameIcon(new ImageIcon(FrmConsultaProveedor.class.getResource("/imgs/documento.png")));
+		getContentPane().setBackground(Color.MAGENTA);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

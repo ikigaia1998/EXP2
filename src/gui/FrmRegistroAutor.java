@@ -18,6 +18,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JComboBox;
+import java.awt.Color;
 
 public class FrmRegistroAutor extends JInternalFrame implements ActionListener {
 
@@ -37,6 +38,7 @@ public class FrmRegistroAutor extends JInternalFrame implements ActionListener {
 	
 
 	public FrmRegistroAutor() {
+		getContentPane().setBackground(Color.GREEN);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

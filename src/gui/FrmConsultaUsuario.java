@@ -19,6 +19,7 @@ import javax.swing.table.DefaultTableModel;
 import entidad.Usuario;
 import model.UsuarioModel;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class FrmConsultaUsuario extends JInternalFrame implements ActionListener {
 
@@ -32,6 +33,7 @@ public class FrmConsultaUsuario extends JInternalFrame implements ActionListener
 	private JTable table;
 
 	public FrmConsultaUsuario() {
+		setFrameIcon(new ImageIcon(FrmConsultaUsuario.class.getResource("/imgs/documento.png")));
 		getContentPane().setBackground(Color.CYAN);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);

@@ -23,6 +23,7 @@ import model.AutorModel;
 import java.awt.event.ActionListener;
 import java.util.List;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class FrmConsultaAutor extends JInternalFrame implements ActionListener {
 
@@ -46,6 +47,8 @@ public class FrmConsultaAutor extends JInternalFrame implements ActionListener {
 	private JButton btnLimpiar;
 
 	public FrmConsultaAutor() {
+		getContentPane().setBackground(Color.GREEN);
+		setFrameIcon(new ImageIcon(FrmConsultaAutor.class.getResource("/imgs/documento.png")));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

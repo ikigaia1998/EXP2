@@ -30,6 +30,7 @@ import java.util.List;
 import java.awt.event.KeyEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
 
 public class FrmReporteAlumno extends JInternalFrame implements KeyListener, ActionListener {
 
@@ -52,6 +53,8 @@ public class FrmReporteAlumno extends JInternalFrame implements KeyListener, Act
 	private JPanel pnlReporte;
 
 	public FrmReporteAlumno() {
+		getContentPane().setBackground(Color.PINK);
+		setFrameIcon(new ImageIcon(FrmReporteAlumno.class.getResource("/imgs/reporte.png")));
 		getContentPane().setForeground(SystemColor.activeCaption);
 		getContentPane().setLayout(null);
 		

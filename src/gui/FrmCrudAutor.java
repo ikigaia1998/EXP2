@@ -56,6 +56,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 	int hoveredRow = -1, hoveredColumn = -1;
 
 	public FrmCrudAutor() {
+		getContentPane().setBackground(Color.GREEN);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

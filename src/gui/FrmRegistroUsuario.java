@@ -20,6 +20,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
 import javax.swing.JComboBox;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 
 
@@ -38,6 +40,8 @@ public class FrmRegistroUsuario extends JInternalFrame implements ActionListener
 	private JComboBox<String> cboPais;
 
 	public FrmRegistroUsuario() {
+		setFrameIcon(new ImageIcon(FrmRegistroUsuario.class.getResource("/imgs/anadir.png")));
+		getContentPane().setBackground(Color.CYAN);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

@@ -25,6 +25,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.swing.JRViewer;
 import util.GeneradorReporte;
 import java.awt.BorderLayout;
+import javax.swing.ImageIcon;
 
 public class FrmReporteAutor extends JInternalFrame implements ActionListener {
 
@@ -47,6 +48,8 @@ public class FrmReporteAutor extends JInternalFrame implements ActionListener {
 	private JButton btnLimpiar;
 
 	public FrmReporteAutor() {
+		setFrameIcon(new ImageIcon(FrmReporteAutor.class.getResource("/imgs/reporte.png")));
+		getContentPane().setBackground(Color.GREEN);
 		getContentPane().setForeground(SystemColor.activeCaption);
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

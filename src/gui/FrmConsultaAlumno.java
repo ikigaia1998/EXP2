@@ -8,8 +8,13 @@ import javax.swing.border.TitledBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Graphics2D;
+import java.awt.Image;
+
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -20,6 +25,9 @@ import entidad.Alumno;
 import model.AlumnoModel;
 
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.awt.event.KeyEvent;
 import java.awt.event.ActionListener;
@@ -47,6 +55,9 @@ public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, Ac
 	private JTextField txtHasta;
 
 	public FrmConsultaAlumno() {
+		getContentPane().setBackground(Color.RED);
+		setFrameIcon(new ImageIcon(FrmConsultaAlumno.class.getResource("/imgs/documento.png")));
+		getContentPane().setForeground(Color.RED);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -121,7 +132,7 @@ public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, Ac
 		
 		btnConsultar = new JButton(" Consultar");
 		btnConsultar.addActionListener(this);
-		btnConsultar.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnConsultar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		btnConsultar.setBounds(423, 152, 165, 21);
 		panel.add(btnConsultar);
 		
@@ -246,4 +257,5 @@ public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, Ac
 		cboPais.setSelectedIndex(-1);
 		txtNombres.requestFocus();
 	}
+	
 }

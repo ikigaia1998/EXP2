@@ -55,7 +55,7 @@ public class FrmCrudProveedor extends JInternalFrame implements MouseListener, A
 	int hoveredRow=-1,hoveredColumn=-1;
 	
 	public FrmCrudProveedor() {
-		getContentPane().setBackground(new Color(153, 204, 255));
+		getContentPane().setBackground(Color.MAGENTA);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

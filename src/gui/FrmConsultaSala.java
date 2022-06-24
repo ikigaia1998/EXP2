@@ -26,6 +26,7 @@ import javax.swing.table.DefaultTableModel;
 
 import entidad.Sala;
 import model.SalaModel;
+import javax.swing.ImageIcon;
 
 public class FrmConsultaSala extends JInternalFrame implements ActionListener {
 
@@ -51,6 +52,8 @@ public class FrmConsultaSala extends JInternalFrame implements ActionListener {
 	int hoveredRow = -1, hoveredColumn = -1;
 
 	public FrmConsultaSala() {
+		getContentPane().setBackground(Color.PINK);
+		setFrameIcon(new ImageIcon(FrmConsultaSala.class.getResource("/imgs/documento.png")));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -60,6 +63,7 @@ public class FrmConsultaSala extends JInternalFrame implements ActionListener {
 		getContentPane().setLayout(null);
 
 		lblNewLabel = new JLabel("Consulta Sala");
+		lblNewLabel.setBackground(Color.GRAY);
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(10, 10, 924, 36);

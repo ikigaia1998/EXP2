@@ -18,6 +18,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.KeyEvent;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 
 public class FrmRegistroProveedor extends JInternalFrame implements ActionListener, KeyListener {
@@ -42,6 +44,8 @@ public class FrmRegistroProveedor extends JInternalFrame implements ActionListen
 	
 
 	public FrmRegistroProveedor() {
+		setFrameIcon(new ImageIcon(FrmRegistroProveedor.class.getResource("/imgs/anadir.png")));
+		getContentPane().setBackground(Color.MAGENTA);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

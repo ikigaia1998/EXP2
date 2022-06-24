@@ -23,6 +23,7 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.swing.JRViewer;
 import util.GeneradorReporte;
+import javax.swing.ImageIcon;
 
 public class FrmReporteUsuario extends JInternalFrame implements ActionListener {
 
@@ -36,6 +37,7 @@ public class FrmReporteUsuario extends JInternalFrame implements ActionListener 
 	private JPanel panelReporte;
 
 	public FrmReporteUsuario() {
+		setFrameIcon(new ImageIcon(FrmReporteUsuario.class.getResource("/imgs/reporte.png")));
 		getContentPane().setBackground(Color.CYAN);
 		getContentPane().setForeground(SystemColor.activeCaption);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

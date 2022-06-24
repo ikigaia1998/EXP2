@@ -19,6 +19,8 @@ import javax.swing.SwingConstants;
 import entidad.Sala;
 import model.SalaModel;
 import util.Validaciones;
+import java.awt.Color;
+import javax.swing.ImageIcon;
 
 public class FrmRegistroSala extends JInternalFrame implements ActionListener, KeyListener {
 
@@ -37,6 +39,8 @@ public class FrmRegistroSala extends JInternalFrame implements ActionListener, K
 	private JButton btnRegistrar;
 
 	public FrmRegistroSala() {
+		setFrameIcon(new ImageIcon(FrmRegistroSala.class.getResource("/imgs/anadir.png")));
+		getContentPane().setBackground(Color.GREEN);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

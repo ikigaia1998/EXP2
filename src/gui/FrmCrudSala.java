@@ -57,6 +57,7 @@ public class FrmCrudSala extends JInternalFrame implements ActionListener, Mouse
 	private JCheckBox chkEstado;
 
 	public FrmCrudSala() {
+		getContentPane().setBackground(Color.PINK);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);

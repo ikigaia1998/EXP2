@@ -83,7 +83,7 @@ public class FrmCrudUsuario extends JInternalFrame implements ActionListener, Mo
 		setTitle("Mantenimiento de Usuario");
 		setBounds(100, 100, 900, 550);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.YELLOW);
+		contentPane.setBackground(Color.CYAN);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
