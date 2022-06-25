@@ -50,7 +50,7 @@ public class FrmReporteLibro extends JInternalFrame implements ActionListener {
 
 	public FrmReporteLibro() {
 		setFrameIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Book.gif")));
-		getContentPane().setBackground(new Color(250, 235, 215));
+		getContentPane().setBackground(new Color(48,155,210));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -60,48 +60,48 @@ public class FrmReporteLibro extends JInternalFrame implements ActionListener {
 		getContentPane().setLayout(null);
 
 		lblNewLabel = new JLabel("Reporte de Libro");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setBounds(437, 32, 218, 27);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel.setBounds(399, 24, 259, 43);
 		getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("T\u00EDtulo :");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_1.setIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Notes.gif")));
+		lblNewLabel_1.setIcon(null);
 		lblNewLabel_1.setBounds(133, 86, 75, 22);
 		getContentPane().add(lblNewLabel_1);
 		
-		lblNewLabel_2 = new JLabel("Anio de Inicio :");
-		lblNewLabel_2.setIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Add.gif")));
+		lblNewLabel_2 = new JLabel("A\u00F1o de Inicio :");
+		lblNewLabel_2.setIcon(null);
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_2.setBounds(133, 127, 121, 26);
 		getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("Categor\u00EDa :");
-		lblNewLabel_3.setIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Bar chart.gif")));
+		lblNewLabel_3.setIcon(null);
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_3.setBounds(133, 219, 97, 22);
 		getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_7 = new JLabel("Serie :");
-		lblNewLabel_7.setIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Numbered list.gif")));
+		lblNewLabel_7.setIcon(null);
 		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_7.setBounds(604, 86, 72, 31);
 		getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_5 = new JLabel("Pa\u00EDs :");
-		lblNewLabel_5.setIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Globe.gif")));
+		lblNewLabel_5.setIcon(null);
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_5.setBounds(604, 129, 81, 22);
 		getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("Tipo :");
-		lblNewLabel_6.setIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Notes.gif")));
+		lblNewLabel_6.setIcon(null);
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_6.setBounds(604, 175, 104, 24);
 		getContentPane().add(lblNewLabel_6);
 		
-		lblNewLabel_4 = new JLabel("Anio de Fin :");
-		lblNewLabel_4.setIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Add.gif")));
+		lblNewLabel_4 = new JLabel("A\u00F1o de Fin :");
+		lblNewLabel_4.setIcon(null);
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_4.setBounds(133, 175, 111, 26);
 		getContentPane().add(lblNewLabel_4);
@@ -164,7 +164,7 @@ public class FrmReporteLibro extends JInternalFrame implements ActionListener {
 		
 		panelReporte = new JPanel();
 		panelReporte.setBorder(new TitledBorder(null, "Reportes de Libro", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panelReporte.setBackground(SystemColor.controlHighlight);
+		panelReporte.setBackground(new Color(206, 246,255));
 		panelReporte.setBounds(10, 263, 1126, 370);
 		panelReporte.setLayout(new BorderLayout());
 		getContentPane().add(panelReporte);
@@ -174,9 +174,12 @@ public class FrmReporteLibro extends JInternalFrame implements ActionListener {
 		setClosable(true);
 		
 		btnFiltro = new JButton("Filtro ");
+		btnFiltro.setBackground(new Color(164, 49, 112));
+		btnFiltro.setFont(new Font("Arial", Font.BOLD, 14));
+		
 		btnFiltro.addActionListener(this);
-		btnFiltro.setIcon(new ImageIcon(FrmReporteLibro.class.getResource("/iconos/Search.gif")));
-		btnFiltro.setBounds(604, 220, 332, 34);
+		btnFiltro.setIcon(null);
+		btnFiltro.setBounds(604, 220, 236, 34);
 		getContentPane().add(btnFiltro);
 		
 	}

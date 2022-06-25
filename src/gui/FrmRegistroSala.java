@@ -40,77 +40,78 @@ public class FrmRegistroSala extends JInternalFrame implements ActionListener, K
 
 	public FrmRegistroSala() {
 		setFrameIcon(new ImageIcon(FrmRegistroSala.class.getResource("/imgs/anadir.png")));
-		getContentPane().setBackground(Color.GREEN);
+		getContentPane().setBackground(new Color(126,225,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Ingreso de Sala");
-		setBounds(100, 100, 900, 550);
+		setBounds(100, 100, 349, 439);
 		getContentPane().setLayout(null);
 
 		lblNewLabel = new JLabel("N\u00FAmero:");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel.setBounds(301, 127, 154, 13);
+		lblNewLabel.setBounds(26, 114, 154, 13);
 		getContentPane().add(lblNewLabel);
 
 		lblNewLabel_1 = new JLabel("Piso:");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_1.setBounds(301, 168, 154, 13);
+		lblNewLabel_1.setBounds(26, 155, 154, 13);
 		getContentPane().add(lblNewLabel_1);
 
 		lblNewLabel_2 = new JLabel("N\u00FAmero de alumnos:");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_2.setBounds(301, 208, 154, 13);
+		lblNewLabel_2.setBounds(26, 195, 154, 13);
 		getContentPane().add(lblNewLabel_2);
 
 		lblNewLabel_3 = new JLabel("Recursos;");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_3.setBounds(301, 249, 154, 13);
+		lblNewLabel_3.setBounds(26, 236, 154, 13);
 		getContentPane().add(lblNewLabel_3);
 
 		lblNewLabel_5 = new JLabel("Sede:");
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblNewLabel_5.setBounds(301, 294, 154, 13);
+		lblNewLabel_5.setBounds(26, 281, 154, 13);
 		getContentPane().add(lblNewLabel_5);
 
 		lblNewLabel_6 = new JLabel("Registro de sala");
 		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.BOLD, 35));
-		lblNewLabel_6.setBounds(10, 26, 868, 53);
+		lblNewLabel_6.setBounds(10, 26, 310, 53);
 		getContentPane().add(lblNewLabel_6);
 
 		cboPiso = new JComboBox<String>();
 		cboPiso.setModel(new DefaultComboBoxModel<String>(new String[] { "Seleccione", "1", "2", "3", "4", "5" }));
-		cboPiso.setBounds(465, 166, 96, 21);
+		cboPiso.setBounds(190, 153, 96, 21);
 		getContentPane().add(cboPiso);
 
 		cboSede = new JComboBox<String>();
 		cboSede.setModel(new DefaultComboBoxModel<String>(new String[] { "Seleccione", "Lima", "Bellavista ", "Bre\u00F1a",
 				"Arequipa", "Trujillo", "Independencia", "Surco" }));
-		cboSede.setBounds(465, 292, 96, 21);
+		cboSede.setBounds(190, 279, 96, 21);
 		getContentPane().add(cboSede);
 
 		txtNumero = new JTextField();
-		txtNumero.setBounds(465, 126, 96, 19);
+		txtNumero.setBounds(190, 113, 96, 19);
 		getContentPane().add(txtNumero);
 		txtNumero.setColumns(10);
 
 		txtNumAlumn = new JTextField();
 		txtNumAlumn.addKeyListener(this);
-		txtNumAlumn.setBounds(465, 207, 96, 19);
+		txtNumAlumn.setBounds(190, 194, 96, 19);
 		getContentPane().add(txtNumAlumn);
 		txtNumAlumn.setColumns(10);
 
 		txtRecursos = new JTextField();
-		txtRecursos.setBounds(465, 248, 96, 19);
+		txtRecursos.setBounds(190, 235, 96, 19);
 		getContentPane().add(txtRecursos);
 		txtRecursos.setColumns(10);
 
 		btnRegistrar = new JButton("Registrar");
+		btnRegistrar.setBackground(new Color(0,201,255));
 		btnRegistrar.addActionListener(this);
 		btnRegistrar.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnRegistrar.setBounds(392, 346, 109, 21);
+		btnRegistrar.setBounds(94, 338, 109, 21);
 		getContentPane().add(btnRegistrar);
 	}
 

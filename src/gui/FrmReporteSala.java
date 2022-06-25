@@ -24,6 +24,7 @@ import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.swing.JRViewer;
 import util.GeneradorReporte;
+import java.awt.Color;
 
 public class FrmReporteSala extends JInternalFrame implements ActionListener {
 
@@ -48,6 +49,7 @@ public class FrmReporteSala extends JInternalFrame implements ActionListener {
 
 	public FrmReporteSala() {
 		getContentPane().setForeground(SystemColor.activeCaption);
+		getContentPane().setBackground(new Color(48,155,210));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -57,7 +59,7 @@ public class FrmReporteSala extends JInternalFrame implements ActionListener {
 		getContentPane().setLayout(null);
 		
 		lblNewLabel = new JLabel("N\u00FAmero:");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel.setBounds(139, 64, 99, 13);
 		getContentPane().add(lblNewLabel);
 		
@@ -67,7 +69,7 @@ public class FrmReporteSala extends JInternalFrame implements ActionListener {
 		getContentPane().add(txtNumero);
 		
 		lblNewLabel_1 = new JLabel("Piso:");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_1.setBounds(139, 89, 99, 13);
 		getContentPane().add(lblNewLabel_1);
 		
@@ -82,12 +84,12 @@ public class FrmReporteSala extends JInternalFrame implements ActionListener {
 		getContentPane().add(txtInicio);
 		
 		lblNewLabel_2 = new JLabel("Fecha de inicio:");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_2.setBounds(562, 79, 99, 13);
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblNewLabel_2.setBounds(562, 79, 124, 13);
 		getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("Fecha fin:");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_3.setBounds(562, 106, 99, 13);
 		getContentPane().add(lblNewLabel_3);
 		
@@ -102,7 +104,7 @@ public class FrmReporteSala extends JInternalFrame implements ActionListener {
 		getContentPane().add(cboSede);
 		
 		lblNewLabel_4 = new JLabel("Sede:");
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_4.setBounds(562, 136, 99, 13);
 		getContentPane().add(lblNewLabel_4);
 		
@@ -112,13 +114,13 @@ public class FrmReporteSala extends JInternalFrame implements ActionListener {
 		getContentPane().add(txtRecursos);
 		
 		lblNewLabel_5 = new JLabel("Recursos:");
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_5.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_5.setBounds(139, 144, 99, 13);
 		getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("N\u00FAmero de alumnos:");
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_6.setBounds(139, 119, 139, 13);
+		lblNewLabel_6.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblNewLabel_6.setBounds(139, 119, 157, 13);
 		getContentPane().add(lblNewLabel_6);
 		
 		txtNumAl = new JTextField();
@@ -128,19 +130,21 @@ public class FrmReporteSala extends JInternalFrame implements ActionListener {
 		
 		lblReporteSala = new JLabel("Reporte Sala");
 		lblReporteSala.setHorizontalAlignment(SwingConstants.CENTER);
-		lblReporteSala.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblReporteSala.setFont(new Font("Arial", Font.BOLD, 30));
 		lblReporteSala.setBounds(10, 10, 924, 36);
 		getContentPane().add(lblReporteSala);
 		
 		btnReporte = new JButton("Reporte");
+		btnReporte.setBackground(new Color(164, 49, 112));
 		btnReporte.addActionListener(this);
-		btnReporte.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnReporte.setBounds(882, 91, 111, 36);
+		btnReporte.setFont(new Font("Arial", Font.PLAIN, 14));
+		btnReporte.setBounds(882, 98, 111, 29);
 		getContentPane().add(btnReporte);
 		
 		panel = new JPanel();
+		panel.setBackground(new Color(206, 246,255));
 		panel.setBorder(new TitledBorder(null, "Reporte Sala", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panel.setBounds(10, 173, 1168, 338);
+		panel.setBounds(10, 174, 1168, 338);
 		getContentPane().add(panel);
 		panel.setLayout(new BorderLayout(0, 0));
 

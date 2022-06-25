@@ -56,7 +56,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 	int hoveredRow = -1, hoveredColumn = -1;
 
 	public FrmCrudAutor() {
-		getContentPane().setBackground(new Color(48,155,210));
+		getContentPane().setBackground(new Color(225,110,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -76,7 +76,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(lblNombres);
 
 		txtNombres = new JTextField();
-		txtNombres.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtNombres.setFont(new Font("Arial", Font.PLAIN, 14));
 		txtNombres.setBounds(209, 69, 223, 22);
 		getContentPane().add(txtNombres);
 		txtNombres.setColumns(10);
@@ -87,7 +87,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(lblApellidos);
 
 		txtApellidos = new JTextField();
-		txtApellidos.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtApellidos.setFont(new Font("Arial", Font.PLAIN, 14));
 		txtApellidos.setColumns(10);
 		txtApellidos.setBounds(621, 69, 223, 22);
 		getContentPane().add(txtApellidos);
@@ -98,7 +98,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(lblFechaNacimiento);
 
 		txtFechaNacimiento = new JTextField();
-		txtFechaNacimiento.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		txtFechaNacimiento.setFont(new Font("Arial", Font.PLAIN, 14));
 		txtFechaNacimiento.setColumns(10);
 		txtFechaNacimiento.setBounds(209, 112, 130, 22);
 		getContentPane().add(txtFechaNacimiento);
@@ -109,7 +109,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(lblPais);
 
 		cboPais = new JComboBox<String>();
-		cboPais.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		cboPais.setFont(new Font("Arial", Font.PLAIN, 14));
 		cboPais.setModel(new DefaultComboBoxModel<String>(new String[] {"[Seleccione]", "Per\u00FA", "Chile", "Ecuador", "Colombia", "Argentina"}));
 		cboPais.setBounds(441, 111, 130, 22);
 		getContentPane().add(cboPais);
@@ -122,39 +122,39 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		cboGrado = new JComboBox<String>();
 		cboGrado.setModel(new DefaultComboBoxModel<String>(
 				new String[] { "[Seleccione]", "T\u00E9cnico", "Licenciado", "Doctor", "Autor" }));
-		cboGrado.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		cboGrado.setFont(new Font("Arial", Font.PLAIN, 14));
 		cboGrado.setBounds(674, 111, 170, 22);
 		getContentPane().add(cboGrado);
 
 		btnIngresar = new JButton("Ingresar");
-		btnIngresar.setBackground(new Color(164, 49, 112));
+		btnIngresar.setBackground(new Color(92,105,205));
 		btnIngresar.addActionListener(this);
 		btnIngresar.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnIngresar.setBounds(209, 162, 130, 33);
 		getContentPane().add(btnIngresar);
 
 		btnActualizar = new JButton("Actualizar");
-		btnActualizar.setBackground(new Color(164, 49, 112));
+		btnActualizar.setBackground(new Color(92,105,205));
 		btnActualizar.addActionListener(this);
 		btnActualizar.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnActualizar.setBounds(380, 162, 130, 33);
 		getContentPane().add(btnActualizar);
 
 		btnEliminar = new JButton("Eliminar");
-		btnEliminar.setBackground(new Color(164, 49, 112));
+		btnEliminar.setBackground(new Color(92,105,205));
 		btnEliminar.addActionListener(this);
 		btnEliminar.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnEliminar.setBounds(552, 162, 130, 33);
 		getContentPane().add(btnEliminar);
 
 		scrollPane = new JScrollPane();
-		scrollPane.setBackground(new Color(206,246,255));
+		scrollPane.setBackground(new Color(213,93,144));
 		scrollPane.setBounds(43, 206, 801, 292);
 		getContentPane().add(scrollPane);
 
 		tblAutor = new JTable();
-		tblAutor.setBackground(new Color(0,207,203));
-		tblAutor.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		tblAutor.setBackground(new Color(213,93,144));
+		tblAutor.setFont(new Font("Arial", Font.PLAIN, 12));
 		tblAutor.setModel(new DefaultTableModel(
 			new Object[][] {
 			},

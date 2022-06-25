@@ -59,7 +59,7 @@ public class FrmCrudLibro extends JInternalFrame implements ActionListener, Mous
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
-		getContentPane().setBackground(new Color(250, 235, 215));
+		getContentPane().setBackground(new Color(225,110,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		
 		setTitle("Mantenimiento de Libro");
@@ -67,43 +67,43 @@ public class FrmCrudLibro extends JInternalFrame implements ActionListener, Mous
 		getContentPane().setLayout(null);
 		
 		lblNewLabel = new JLabel("Mantenimiento de Libro");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setBounds(306, 38, 284, 34);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel.setBounds(220, 24, 349, 34);
 		getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("T\u00EDtulo :");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_1.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Notes.gif")));
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 14));
+		
 		lblNewLabel_1.setBounds(112, 85, 75, 22);
 		getContentPane().add(lblNewLabel_1);
 		
 		lblNewLabel_2 = new JLabel("A\u00F1o :");
-		lblNewLabel_2.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Add.gif")));
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_2.setBounds(112, 124, 75, 26);
 		getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("Categor\u00EDa :");
-		lblNewLabel_3.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Bar chart.gif")));
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_3.setBounds(112, 173, 97, 22);
 		getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_7 = new JLabel("Serie :");
-		lblNewLabel_7.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Numbered list.gif")));
-		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_7.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_7.setBounds(431, 83, 72, 31);
 		getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_5 = new JLabel("Pa\u00EDs :");
-		lblNewLabel_5.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Globe.gif")));
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_5.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_5.setBounds(431, 126, 81, 22);
 		getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("Tipo :");
-		lblNewLabel_6.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Notes.gif")));
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_6.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_6.setBounds(431, 172, 104, 24);
 		getContentPane().add(lblNewLabel_6);
 		
@@ -160,20 +160,23 @@ public class FrmCrudLibro extends JInternalFrame implements ActionListener, Mous
 		txtSerie.setColumns(10);
 		
 		btnRegistrar = new JButton("Registrar");
+		btnRegistrar.setBackground(new Color(92,105,205));
 		btnRegistrar.addActionListener(this);
-		btnRegistrar.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Add.gif")));
+		
 		btnRegistrar.setBounds(156, 234, 114, 34);
 		getContentPane().add(btnRegistrar);
 		
 		btnEliminar = new JButton("Eliminar");
+		btnEliminar.setBackground(new Color(92,105,205));
 		btnEliminar.addActionListener(this);
-		btnEliminar.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Delete.gif")));
+		
 		btnEliminar.setBounds(368, 234, 114, 34);
 		getContentPane().add(btnEliminar);
 		
 		btnActualizar = new JButton("Actualizar");
+		btnActualizar.setBackground(new Color(92,105,205));
 		btnActualizar.addActionListener(this);
-		btnActualizar.setIcon(new ImageIcon(FrmCrudLibro.class.getResource("/iconos/Edit.gif")));
+		
 		btnActualizar.setBounds(585, 234, 114, 34);
 		getContentPane().add(btnActualizar);
 		
@@ -182,12 +185,13 @@ public class FrmCrudLibro extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(scrollPane);
 		
 		table = new JTable();
+		table.setBackground(new Color(213,93,144));
 		table.addMouseListener(this);
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 			},
 			new String[] {
-				"CÃ³digo","TÃ­tulo","AÃ±o","CategorÃ­a","Serie","PaÃ­s","Tipo"
+				"Código","Título","Año","Categoría","Serie","País","Tipo"
 			}
 		));
 
@@ -222,7 +226,7 @@ public class FrmCrudLibro extends JInternalFrame implements ActionListener, Mous
 		
 		table.getTableHeader().setReorderingAllowed(false);
 		scrollPane.setViewportView(table);	
-		table.setSelectionBackground(Color.black);
+		table.setSelectionBackground(new Color(255,228,225));
 	    table.setDefaultEditor(Object.class, null);
 	    
 	    

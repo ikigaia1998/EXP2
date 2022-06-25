@@ -65,7 +65,7 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 	
 
 	public FrmCrudAlumno() {
-		getContentPane().setBackground(new Color(48, 155, 210));
+		getContentPane().setBackground(new Color(225,110,110));
 		
 		
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -73,7 +73,7 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Mantenimiento de Alumno");
-		setBounds(100, 100, 900, 625);
+		setBounds(100, 100, 900, 574);
 		getContentPane().setLayout(null);
 		
 		lblNewLabel = new JLabel("Mantenimiento Alumno");
@@ -151,21 +151,21 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		getContentPane().add(cboPais);
 		
 		btnAdd = new JButton("A\u00F1adir");
-		btnAdd.setBackground(new Color(164, 49, 112));
+		btnAdd.setBackground(new Color(92,105,205));
 		btnAdd.addActionListener(this);
 		btnAdd.setFont(new Font("Arial", Font.PLAIN, 12));
 		btnAdd.setBounds(117, 180, 149, 32);
 		getContentPane().add(btnAdd);
 		
 		btnModificar = new JButton("Modificar");
-		btnModificar.setBackground(new Color(164, 49, 112));
+		btnModificar.setBackground(new Color(92,105,205));
 		btnModificar.addActionListener(this);
 		btnModificar.setFont(new Font("Arial", Font.PLAIN, 12));
 		btnModificar.setBounds(371, 180, 149, 32);
 		getContentPane().add(btnModificar);
 		
 		btnEliminar = new JButton("Eliminar");
-		btnEliminar.setBackground(new Color(164, 49, 112));
+		btnEliminar.setBackground(new Color(92,105,205));
 		btnEliminar.addMouseListener(this);
 		btnEliminar.addActionListener(this);
 		btnEliminar.setFont(new Font("Arial", Font.PLAIN, 12));
@@ -173,11 +173,11 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		getContentPane().add(btnEliminar);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(28, 285, 827, 290);
+		scrollPane.setBounds(28, 246, 827, 290);
 		getContentPane().add(scrollPane);
 		
 		table = new JTable();
-		table.setBackground(new Color(206, 246,255));
+		table.setBackground(new Color(213,93,144));
 		table.addMouseMotionListener(this);
 		table.addMouseListener(this);
 		table.setModel(new DefaultTableModel(
@@ -212,10 +212,10 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		
 		table.setDefaultEditor(Object.class, null);
 		
-		table.setSelectionBackground(new Color(0, 207, 203));
+		table.setSelectionBackground(new Color(255,228,225));
 		
 		panel = new JPanel();
-		panel.setBackground(new Color(48, 155, 210));
+		panel.setBackground(new Color(225,110,110));
 		panel.setBounds(99, 10, 677, 37);
 		getContentPane().add(panel);
 		

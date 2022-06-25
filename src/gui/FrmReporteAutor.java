@@ -49,7 +49,7 @@ public class FrmReporteAutor extends JInternalFrame implements ActionListener {
 
 	public FrmReporteAutor() {
 		setFrameIcon(new ImageIcon(FrmReporteAutor.class.getResource("/imgs/reporte.png")));
-		getContentPane().setBackground(Color.GREEN);
+		getContentPane().setBackground(new Color(48,155,210));
 		getContentPane().setForeground(SystemColor.activeCaption);
 		getContentPane().setLayout(null);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -57,49 +57,49 @@ public class FrmReporteAutor extends JInternalFrame implements ActionListener {
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Reporte de Autor");
-		setBounds(100, 100, 1200, 600);
+		setBounds(100, 100, 1134, 603);
 		
 		lblPais = new JLabel("Pa\u00EDs");
-		lblPais.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblPais.setBounds(118, 135, 61, 20);
+		lblPais.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblPais.setBounds(20, 134, 61, 20);
 		getContentPane().add(lblPais);
 		
 		cboPais = new JComboBox<String>();
 		cboPais.setModel(new DefaultComboBoxModel<String>(new String[] {"[Seleccione]", "Per\u00FA", "Chile", "Ecuador", "Colombia", "Argentina"}));
 		cboPais.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		cboPais.setBounds(186, 133, 165, 25);
+		cboPais.setBounds(216, 129, 165, 25);
 		getContentPane().add(cboPais);
 		
 		txtNombres = new JTextField();
 		txtNombres.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		txtNombres.setColumns(10);
-		txtNombres.setBounds(245, 57, 205, 22);
+		txtNombres.setBounds(216, 54, 205, 22);
 		getContentPane().add(txtNombres);
 		
 		lblNombre = new JLabel("Nombres");
-		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNombre.setBounds(118, 58, 84, 20);
+		lblNombre.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblNombre.setBounds(20, 57, 84, 20);
 		getContentPane().add(lblNombre);
 		
 		lblGrado = new JLabel("Grado");
-		lblGrado.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblGrado.setBounds(515, 136, 61, 19);
+		lblGrado.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblGrado.setBounds(455, 135, 61, 19);
 		getContentPane().add(lblGrado);
 		
 		lblApellido = new JLabel("Apellidos");
-		lblApellido.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblApellido.setBounds(515, 58, 90, 20);
+		lblApellido.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblApellido.setBounds(455, 57, 90, 20);
 		getContentPane().add(lblApellido);
 		
 		cboGrado = new JComboBox<String>();
 		cboGrado.setModel(new DefaultComboBoxModel<String>(new String[] {"[Seleccione]", "T\u00E9cnico", "Licenciado", "Doctor", "Autor"}));
 		cboGrado.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		cboGrado.setBounds(600, 130, 165, 25);
+		cboGrado.setBounds(661, 131, 205, 25);
 		getContentPane().add(cboGrado);
 		
 		lblFechaDeNacimiento = new JLabel("Fecha de  nacimiento desde");
-		lblFechaDeNacimiento.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblFechaDeNacimiento.setBounds(119, 101, 209, 20);
+		lblFechaDeNacimiento.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblFechaDeNacimiento.setBounds(21, 100, 209, 20);
 		getContentPane().add(lblFechaDeNacimiento);
 		
 		txtApellidos = new JTextField();
@@ -111,40 +111,43 @@ public class FrmReporteAutor extends JInternalFrame implements ActionListener {
 		txtFechaDesde = new JTextField();
 		txtFechaDesde.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		txtFechaDesde.setColumns(10);
-		txtFechaDesde.setBounds(327, 95, 123, 22);
+		txtFechaDesde.setBounds(216, 97, 205, 22);
 		getContentPane().add(txtFechaDesde);
 		
 		lblReporteDeAutor = new JLabel("Reporte de Autor");
-		lblReporteDeAutor.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblReporteDeAutor.setBounds(455, 11, 194, 25);
+		lblReporteDeAutor.setFont(new Font("Arial", Font.BOLD, 30));
+		lblReporteDeAutor.setBounds(391, 7, 285, 36);
 		getContentPane().add(lblReporteDeAutor);
 		
 		btnFiltrar = new JButton("Filtrar");
+		btnFiltrar.setBackground(new Color(164, 49, 112));
 		btnFiltrar.addActionListener(this);
-		btnFiltrar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnFiltrar.setFont(new Font("Arial", Font.BOLD, 14));
 		btnFiltrar.setBounds(902, 58, 159, 38);
 		getContentPane().add(btnFiltrar);
 		
 		pnlReporte = new JPanel();
+		pnlReporte.setBackground(new Color(206,246,255));
 		pnlReporte.setBorder(new TitledBorder(new LineBorder(new Color(0, 0, 0)), "Reporte", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		pnlReporte.setBounds(52, 175, 1089, 366);
+		pnlReporte.setBounds(10, 193, 1089, 366);
 		getContentPane().add(pnlReporte);
 		pnlReporte.setLayout(new BorderLayout(0, 0));
 		
 		lblFechaNacimientoHasta = new JLabel("Fecha de nacimiento hasta");
-		lblFechaNacimientoHasta.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblFechaNacimientoHasta.setBounds(515, 96, 205, 20);
+		lblFechaNacimientoHasta.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblFechaNacimientoHasta.setBounds(455, 95, 205, 20);
 		getContentPane().add(lblFechaNacimientoHasta);
 		
 		txtFechaHasta = new JTextField();
 		txtFechaHasta.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		txtFechaHasta.setColumns(10);
-		txtFechaHasta.setBounds(743, 94, 123, 22);
+		txtFechaHasta.setBounds(661, 97, 205, 22);
 		getContentPane().add(txtFechaHasta);
 		
 		btnLimpiar = new JButton("Limpiar filtros");
+		btnLimpiar.setBackground(new Color(164, 49, 112));
 		btnLimpiar.addActionListener(this);
-		btnLimpiar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnLimpiar.setFont(new Font("Arial", Font.BOLD, 14));
 		btnLimpiar.setBounds(902, 115, 159, 38);
 		getContentPane().add(btnLimpiar);
 

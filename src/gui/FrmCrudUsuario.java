@@ -83,7 +83,7 @@ public class FrmCrudUsuario extends JInternalFrame implements ActionListener, Mo
 		setTitle("Mantenimiento de Usuario");
 		setBounds(100, 100, 900, 550);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.CYAN);
+		contentPane.setBackground(new Color(225,110,110));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -142,7 +142,7 @@ public class FrmCrudUsuario extends JInternalFrame implements ActionListener, Mo
 		contentPane.add(txtCorreo);
 		
 		JLabel lblNewLabel_8 = new JLabel("Fecha de Nacimiento");
-		lblNewLabel_8.setBounds(325, 156, 113, 13);
+		lblNewLabel_8.setBounds(325, 156, 132, 13);
 		getContentPane().add(lblNewLabel_8);
 		
 		txtNacimiento = new JTextField();
@@ -160,16 +160,19 @@ public class FrmCrudUsuario extends JInternalFrame implements ActionListener, Mo
 		contentPane.add(txtDireccion);
 		
 		btnIngresar = new JButton("Ingresar");
+		btnIngresar.setBackground(new Color(92,105,205));
 		btnIngresar.addActionListener(this);
 		btnIngresar.setBounds(686, 103, 85, 34);
 		contentPane.add(btnIngresar);
 		
 		btnActualizar = new JButton("Actualizar");
+		btnActualizar.setBackground(new Color(92,105,205));
 		btnActualizar.addActionListener(this);
 		btnActualizar.setBounds(686, 162, 85, 34);
 		contentPane.add(btnActualizar);
 		
 		btnEliminar = new JButton("Eliminar");
+		btnEliminar.setBackground(new Color(92,105,205));
 		btnEliminar.addActionListener(this);
 		btnEliminar.setBounds(686, 222, 85, 34);
 		contentPane.add(btnEliminar);
@@ -188,8 +191,8 @@ public class FrmCrudUsuario extends JInternalFrame implements ActionListener, Mo
 		contentPane.add(cboPais);
 		
 		JLabel lblNewLabel = new JLabel("Mantenimiento de Usuario");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 14));
-		lblNewLabel.setBounds(298, 26, 290, 34);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel.setBounds(226, 27, 386, 34);
 		contentPane.add(lblNewLabel);
 		
 		scrollPane = new JScrollPane();
@@ -197,6 +200,7 @@ public class FrmCrudUsuario extends JInternalFrame implements ActionListener, Mo
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
+		table.setBackground(new Color(213,93,144));
 		table.addMouseListener(this);
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
@@ -234,7 +238,7 @@ public class FrmCrudUsuario extends JInternalFrame implements ActionListener, Mo
 				table.getTableHeader().setReorderingAllowed(false);
 				
 				//color de la fila seleccionada
-				table.setSelectionBackground(Color.BLUE);
+				table.setSelectionBackground(new Color(255,228,225));
 				
 				  //No se pueda editar
 			    table.setDefaultEditor(Object.class, null);

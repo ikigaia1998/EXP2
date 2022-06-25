@@ -34,7 +34,7 @@ public class FrmRegistroLibro extends JInternalFrame implements ActionListener, 
 	
 	public FrmRegistroLibro() {
 		setFrameIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/Book.gif")));
-		getContentPane().setBackground(new Color(250, 235, 215));
+		getContentPane().setBackground(new Color(126,225,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -44,42 +44,41 @@ public class FrmRegistroLibro extends JInternalFrame implements ActionListener, 
 		getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("Registro de Libro");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 24));
 		lblNewLabel.setBounds(114, 32, 204, 27);
 		getContentPane().add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("TÃ­tulo :");
-		lblNewLabel_1.setIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/Notes.gif")));
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		JLabel lblNewLabel_1 = new JLabel("Título :");
+		
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_1.setBounds(79, 89, 74, 24);
 		getContentPane().add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("A\u00F1o :");
-		lblNewLabel_2.setIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/Add.gif")));
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		JLabel lblNewLabel_2 = new JLabel("Año :");
+		
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_2.setBounds(79, 124, 61, 25);
 		getContentPane().add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("CategorÃ­a :");
-		lblNewLabel_3.setIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/Bar chart.gif")));
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		JLabel lblNewLabel_3 = new JLabel("Categoría :");
+		
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_3.setBounds(79, 160, 104, 28);
 		getContentPane().add(lblNewLabel_3);
 		
 		JLabel lblNewLabel_4 = new JLabel("Serie :");
-		lblNewLabel_4.setIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/Numbered list.gif")));
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_4.setBounds(79, 193, 74, 25);
 		getContentPane().add(lblNewLabel_4);
 		
-		JLabel lblNewLabel_6 = new JLabel("PaÃ­s :");
-		lblNewLabel_6.setIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/Globe.gif")));
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		JLabel lblNewLabel_6 = new JLabel("País :");
+		
+		lblNewLabel_6.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_6.setBounds(79, 229, 74, 27);
 		getContentPane().add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("Tipo :");
-		lblNewLabel_7.setIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/Notes.gif")));
 		lblNewLabel_7.setFont(new Font("Dialog", Font.PLAIN, 14));
 		lblNewLabel_7.setBounds(79, 267, 74, 27);
 		getContentPane().add(lblNewLabel_7);
@@ -104,18 +103,18 @@ public class FrmRegistroLibro extends JInternalFrame implements ActionListener, 
 		txtSerie.setColumns(10);
 		
 		btnRegistrar = new JButton("Registrar");
-		btnRegistrar.setIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/Right.gif")));
+		btnRegistrar.setBackground(new Color(0,201,255));
 		btnRegistrar.addActionListener(this);
 		btnRegistrar.setBounds(79, 308, 127, 43);
 		getContentPane().add(btnRegistrar);
 		
 		cbCategoria = new JComboBox<String>();
 		cbCategoria.addItem("Seleccionar");
-		cbCategoria.addItem("CientÃ­fico");
+		cbCategoria.addItem("Científico");
 		cbCategoria.addItem("Cuento");
 		cbCategoria.addItem("Drama");
 		cbCategoria.addItem("Estrategia");
-		cbCategoria.addItem("FÃºbula");
+		cbCategoria.addItem("Fábula");
 		cbCategoria.addItem("Leyenda");
 		cbCategoria.addItem("Literatura");
 		cbCategoria.addItem("Novelas");
@@ -133,8 +132,8 @@ public class FrmRegistroLibro extends JInternalFrame implements ActionListener, 
 		cbPais.addItem("Colombia");
 		cbPais.addItem("Ecuador");
 		cbPais.addItem("E.E.U.U.");
-		cbPais.addItem("MÃ©xico");
-		cbPais.addItem("PerÃº");
+		cbPais.addItem("México");
+		cbPais.addItem("Perú");
 		cbPais.setBounds(234, 233, 146, 22);
 		getContentPane().add(cbPais);
 		
@@ -146,12 +145,13 @@ public class FrmRegistroLibro extends JInternalFrame implements ActionListener, 
 		getContentPane().add(cbTipo);
 		
 		JButton btnLimpiar = new JButton("Limpiar");
+		btnLimpiar.setBackground(new Color(0,201,255));
 		btnLimpiar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				actionPerformedBtnLimpiarJButton(e);
 			}
 		});
-		btnLimpiar.setIcon(new ImageIcon(FrmRegistroLibro.class.getResource("/iconos/limpieza-de-datos.png")));
+		
 		btnLimpiar.setBounds(253, 308, 127, 43);
 		getContentPane().add(btnLimpiar);
 		

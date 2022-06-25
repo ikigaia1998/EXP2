@@ -53,7 +53,7 @@ public class FrmReporteProveedor extends JInternalFrame implements ActionListene
 
 	public FrmReporteProveedor() {
 		setFrameIcon(new ImageIcon(FrmReporteProveedor.class.getResource("/imgs/reporte.png")));
-		getContentPane().setBackground(new Color(0, 153, 255));
+		getContentPane().setBackground(new Color(48,155,210));
 		getContentPane().setForeground(SystemColor.activeCaption);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
@@ -64,8 +64,8 @@ public class FrmReporteProveedor extends JInternalFrame implements ActionListene
 		getContentPane().setLayout(null);
 		
 		lblReporteProveedor = new JLabel("Reporte Proveedor");
-		lblReporteProveedor.setFont(new Font("Sylfaen", Font.BOLD, 24));
-		lblReporteProveedor.setBounds(477, 11, 238, 37);
+		lblReporteProveedor.setFont(new Font("Arial", Font.BOLD, 29));
+		lblReporteProveedor.setBounds(452, 11, 295, 37);
 		getContentPane().add(lblReporteProveedor);
 		
 		lblNewLabel_1 = new JLabel("Nombres");
@@ -140,7 +140,7 @@ public class FrmReporteProveedor extends JInternalFrame implements ActionListene
 		btnGenerar.addActionListener(this);
 		btnGenerar.setFont(new Font("Arial", Font.BOLD, 13));
 		btnGenerar.setForeground(Color.WHITE);
-		btnGenerar.setBackground(new Color(102, 0, 51));
+		btnGenerar.setBackground(new Color(164, 49, 112));
 		btnGenerar.setBounds(838, 164, 145, 31);
 		getContentPane().add(btnGenerar);
 		
@@ -159,7 +159,7 @@ public class FrmReporteProveedor extends JInternalFrame implements ActionListene
 		
 		panelReporte = new JPanel();
 		panelReporte.setBorder(new TitledBorder(null, "Reporte", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panelReporte.setBackground(new Color(102, 153, 255));
+		panelReporte.setBackground(new Color(206, 246,255));
 		panelReporte.setBounds(10, 219, 1147, 507);
 		getContentPane().add(panelReporte);
 		panelReporte.setLayout(new BorderLayout(0, 0));

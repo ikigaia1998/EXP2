@@ -52,7 +52,7 @@ public class FrmConsultaSala extends JInternalFrame implements ActionListener {
 	int hoveredRow = -1, hoveredColumn = -1;
 
 	public FrmConsultaSala() {
-		getContentPane().setBackground(Color.PINK);
+		getContentPane().setBackground(new Color(23,175,174));
 		setFrameIcon(new ImageIcon(FrmConsultaSala.class.getResource("/imgs/documento.png")));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
@@ -64,7 +64,7 @@ public class FrmConsultaSala extends JInternalFrame implements ActionListener {
 
 		lblNewLabel = new JLabel("Consulta Sala");
 		lblNewLabel.setBackground(Color.GRAY);
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(10, 10, 924, 36);
 		getContentPane().add(lblNewLabel);
@@ -140,6 +140,7 @@ public class FrmConsultaSala extends JInternalFrame implements ActionListener {
 		getContentPane().add(cboSede);
 
 		btnBuscar = new JButton("Buscar");
+		btnBuscar.setBackground(new Color(152, 79, 151));
 		btnBuscar.addActionListener(this);
 		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnBuscar.setBounds(752, 72, 99, 35);
@@ -150,6 +151,7 @@ public class FrmConsultaSala extends JInternalFrame implements ActionListener {
 		getContentPane().add(scrollPane);
 
 		table = new JTable();
+		table.setBackground(new Color(191,252,250));
 		table.setModel(new DefaultTableModel(new Object[][] {}, new String[] { "C\u00F3digo", "N\u00FAmero sala",
 				"Piso", "N\u00FAmero alumnos", "Recursos", "Estado", "Fecha registro", "Sede" }));
 		scrollPane.setViewportView(table);
@@ -187,7 +189,7 @@ public class FrmConsultaSala extends JInternalFrame implements ActionListener {
 		scrollPane.setViewportView(table);
 
 		// color de la fila seleccionada
-		table.setSelectionBackground(Color.blue);
+		table.setSelectionBackground(new Color( 53,194,169));
 
 		// No se pueda editar
 		table.setDefaultEditor(Object.class, null);

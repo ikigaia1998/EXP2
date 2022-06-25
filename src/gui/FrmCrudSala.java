@@ -57,7 +57,7 @@ public class FrmCrudSala extends JInternalFrame implements ActionListener, Mouse
 	private JCheckBox chkEstado;
 
 	public FrmCrudSala() {
-		getContentPane().setBackground(Color.PINK);
+		getContentPane().setBackground(new Color(225,110,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -71,19 +71,20 @@ public class FrmCrudSala extends JInternalFrame implements ActionListener, Mouse
 		getContentPane().add(scrollPane);
 
 		tblSala = new JTable();
+		tblSala.setBackground(new Color(213,93,144));
 		tblSala.addMouseListener(this);
 		tblSala.setModel(new DefaultTableModel(new Object[][] {},
 				new String[] { "Código","Número de sala", "N\u00FAmero de alumnos", "Piso", "Recursos", "Estado", "Sede" }));
 		scrollPane.setViewportView(tblSala);
 
 		lblNewLabel = new JLabel("Mantenimiento sala");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(10, 10, 868, 28);
+		lblNewLabel.setBounds(10, 10, 868, 36);
 		getContentPane().add(lblNewLabel);
 
 		lblNewLabel_1 = new JLabel("N\u00FAmero:");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 16));
 		lblNewLabel_1.setBounds(73, 75, 154, 13);
 		getContentPane().add(lblNewLabel_1);
 
@@ -98,22 +99,22 @@ public class FrmCrudSala extends JInternalFrame implements ActionListener, Mouse
 		getContentPane().add(cboPiso);
 
 		lblNewLabel_2 = new JLabel("Piso:");
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 16));
 		lblNewLabel_2.setBounds(506, 76, 154, 13);
 		getContentPane().add(lblNewLabel_2);
 
 		lblNewLabel_3 = new JLabel("N\u00FAmero de alumnos:");
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 16));
 		lblNewLabel_3.setBounds(73, 126, 154, 13);
 		getContentPane().add(lblNewLabel_3);
 
 		lblNewLabel_4 = new JLabel("Recursos:");
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 16));
 		lblNewLabel_4.setBounds(506, 127, 154, 13);
 		getContentPane().add(lblNewLabel_4);
 
 		lblNewLabel_5 = new JLabel("Sede:");
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNewLabel_5.setFont(new Font("Arial", Font.PLAIN, 16));
 		lblNewLabel_5.setBounds(73, 181, 154, 13);
 		getContentPane().add(lblNewLabel_5);
 
@@ -135,19 +136,22 @@ public class FrmCrudSala extends JInternalFrame implements ActionListener, Mouse
 		getContentPane().add(cboSede);
 
 		btnRegistrar = new JButton("Registrar");
-		btnRegistrar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnRegistrar.setBackground(new Color(92,105,205));
+		btnRegistrar.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnRegistrar.addActionListener(this);
 		btnRegistrar.setBounds(228, 245, 103, 28);
 		getContentPane().add(btnRegistrar);
 
 		btnEliminar = new JButton("Eliminar");
-		btnEliminar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnEliminar.setBackground(new Color(92,105,205));
+		btnEliminar.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnEliminar.addActionListener(this);
 		btnEliminar.setBounds(386, 245, 103, 28);
 		getContentPane().add(btnEliminar);
 
 		btnActualizar = new JButton("Actualizar");
-		btnActualizar.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnActualizar.setBackground(new Color(92,105,205));
+		btnActualizar.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnActualizar.addActionListener(this);
 		btnActualizar.setBounds(535, 244, 103, 30);
 		getContentPane().add(btnActualizar);
@@ -177,10 +181,10 @@ public class FrmCrudSala extends JInternalFrame implements ActionListener, Mouse
 		scrollPane.setViewportView(tblSala);
 
 		// color de la fila seleccionada
-		tblSala.setSelectionBackground(Color.blue);
+		tblSala.setSelectionBackground(new Color(255,228,225));
 		
 		chkEstado = new JCheckBox("Activo");
-		chkEstado.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		chkEstado.setFont(new Font("Arial", Font.PLAIN, 16));
 		chkEstado.setSelected(true);
 		chkEstado.setBounds(506, 172, 97, 30);
 		getContentPane().add(chkEstado);

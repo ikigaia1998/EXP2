@@ -51,17 +51,19 @@ public class FrmReporteAlumno extends JInternalFrame implements KeyListener, Act
 	private JLabel lblHasta;
 	private JTextField txtHasta;
 	private JPanel pnlReporte;
+	private JLabel lblNewLabel_1;
 
 	public FrmReporteAlumno() {
-		getContentPane().setBackground(Color.PINK);
+		getContentPane().setBackground(new Color(48,155,210));
 		setFrameIcon(new ImageIcon(FrmReporteAlumno.class.getResource("/imgs/reporte.png")));
 		getContentPane().setForeground(SystemColor.activeCaption);
 		getContentPane().setLayout(null);
 		
 		panel = new JPanel();
+		panel.setBackground(new Color(48,155,210));
 		panel.setLayout(null);
-		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Reporte", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(72, 61, 139)));
-		panel.setBounds(10, 10, 1090, 184);
+		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Reporte", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel.setBounds(8, 63, 1090, 184);
 		getContentPane().add(panel);
 		
 		lblNewLabel = new JLabel("Nombres:");
@@ -122,7 +124,8 @@ public class FrmReporteAlumno extends JInternalFrame implements KeyListener, Act
 		
 		btnConsultar = new JButton(" Consultar");
 		btnConsultar.addActionListener(this);
-		btnConsultar.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		btnConsultar.setBackground(new Color(206, 246,255));
+		btnConsultar.setFont(new Font("Arial", Font.PLAIN, 14));
 		btnConsultar.setBounds(423, 152, 165, 21);
 		panel.add(btnConsultar);
 		
@@ -142,16 +145,22 @@ public class FrmReporteAlumno extends JInternalFrame implements KeyListener, Act
 		panel.add(txtHasta);
 		
 		pnlReporte = new JPanel();
-		pnlReporte.setBorder(new LineBorder(new Color(0, 0, 0)));
-		pnlReporte.setBounds(10, 204, 1088, 307);
+		pnlReporte.setBackground(new Color(206, 246,255));
+		pnlReporte.setBorder(new TitledBorder(null, "Reporte", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+		pnlReporte.setBounds(10, 258, 1088, 307);
 		getContentPane().add(pnlReporte);
 		pnlReporte.setLayout(new BoxLayout(pnlReporte, BoxLayout.X_AXIS));
+		
+		lblNewLabel_1 = new JLabel("Reporte Alumno");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel_1.setBounds(393, 11, 263, 41);
+		getContentPane().add(lblNewLabel_1);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Reporte de alumno");
-		setBounds(100, 100, 1120, 550);
+		setBounds(100, 100, 1120, 606);
 
 	}
 	public void keyPressed(KeyEvent e) {

@@ -38,26 +38,27 @@ public class FrmReporteUsuario extends JInternalFrame implements ActionListener 
 
 	public FrmReporteUsuario() {
 		setFrameIcon(new ImageIcon(FrmReporteUsuario.class.getResource("/imgs/reporte.png")));
-		getContentPane().setBackground(Color.CYAN);
+		getContentPane().setBackground(new Color(48,155,210));
 		getContentPane().setForeground(SystemColor.activeCaption);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Reporte de Usuario");
-		setBounds(100, 100, 1200, 550);
+		setBounds(100, 100, 1137, 550);
 		getContentPane().setLayout(null);
 		
 		JLabel lblReporteDeUsuario = new JLabel("Reporte de Usuario");
-		lblReporteDeUsuario.setForeground(Color.BLUE);
+		lblReporteDeUsuario.setForeground(Color.BLACK);
 		lblReporteDeUsuario.setBackground(Color.WHITE);
 		lblReporteDeUsuario.setHorizontalAlignment(SwingConstants.CENTER);
-		lblReporteDeUsuario.setFont(new Font("Arial Black", Font.ITALIC, 18));
-		lblReporteDeUsuario.setBounds(67, 10, 886, 48);
+		lblReporteDeUsuario.setFont(new Font("Arial", Font.BOLD, 30));
+		lblReporteDeUsuario.setBounds(106, 11, 886, 48);
 		getContentPane().add(lblReporteDeUsuario);
 		
 		JLabel lblNewLabel = new JLabel("Nombre");
-		lblNewLabel.setBounds(156, 120, 69, 14);
+		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblNewLabel.setBounds(156, 120, 87, 14);
 		getContentPane().add(lblNewLabel);
 		
 		txtNombre = new JTextField();
@@ -66,7 +67,8 @@ public class FrmReporteUsuario extends JInternalFrame implements ActionListener 
 		getContentPane().add(txtNombre);
 		
 		JLabel lblNewLabel_1 = new JLabel("DNI");
-		lblNewLabel_1.setBounds(156, 198, 46, 14);
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblNewLabel_1.setBounds(156, 198, 67, 14);
 		getContentPane().add(lblNewLabel_1);
 		
 		txtDNI = new JTextField();
@@ -75,7 +77,8 @@ public class FrmReporteUsuario extends JInternalFrame implements ActionListener 
 		getContentPane().add(txtDNI);
 		
 		JLabel lblFechaDeInicio = new JLabel("Fecha de Inicio");
-		lblFechaDeInicio.setBounds(463, 153, 91, 20);
+		lblFechaDeInicio.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblFechaDeInicio.setBounds(432, 153, 116, 20);
 		getContentPane().add(lblFechaDeInicio);
 		
 		txtInicio = new JTextField();
@@ -84,7 +87,8 @@ public class FrmReporteUsuario extends JInternalFrame implements ActionListener 
 		getContentPane().add(txtInicio);
 		
 		JLabel lblFechaDeFin = new JLabel("Fecha de Fin");
-		lblFechaDeFin.setBounds(463, 198, 85, 14);
+		lblFechaDeFin.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblFechaDeFin.setBounds(432, 198, 116, 14);
 		getContentPane().add(lblFechaDeFin);
 		
 		txtFin = new JTextField();
@@ -93,7 +97,8 @@ public class FrmReporteUsuario extends JInternalFrame implements ActionListener 
 		getContentPane().add(txtFin);
 		
 		JLabel lblNewLabel_2 = new JLabel("Apellidos");
-		lblNewLabel_2.setBounds(156, 157, 69, 13);
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 14));
+		lblNewLabel_2.setBounds(156, 157, 87, 13);
 		getContentPane().add(lblNewLabel_2);
 		
 		txtApellidos = new JTextField();
@@ -102,14 +107,16 @@ public class FrmReporteUsuario extends JInternalFrame implements ActionListener 
 		getContentPane().add(txtApellidos);
 		
 		btnFiltrar = new JButton("Filtrar");
-		btnFiltrar.setFont(new Font("Arial Black", Font.ITALIC, 24));
+		btnFiltrar.setBackground(new Color(164, 49, 112));
+		btnFiltrar.setFont(new Font("Arial", Font.BOLD, 14));
 		btnFiltrar.addActionListener(this);
-		btnFiltrar.setBounds(879, 153, 162, 59);
+		btnFiltrar.setBounds(768, 188, 162, 33);
 		getContentPane().add(btnFiltrar);
 		
 		panelReporte = new JPanel();
+		panelReporte.setBackground(new Color(206, 246,255));
 		panelReporte.setBorder(new TitledBorder(null, "Reportes", TitledBorder.CENTER, TitledBorder.TOP, null, null));
-		panelReporte.setBounds(26, 237, 1099, 259);
+		panelReporte.setBounds(10, 250, 1099, 259);
 		getContentPane().add(panelReporte);
 		panelReporte.setLayout(new BorderLayout());
 

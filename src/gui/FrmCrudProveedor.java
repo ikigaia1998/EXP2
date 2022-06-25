@@ -55,7 +55,7 @@ public class FrmCrudProveedor extends JInternalFrame implements MouseListener, A
 	int hoveredRow=-1,hoveredColumn=-1;
 	
 	public FrmCrudProveedor() {
-		getContentPane().setBackground(Color.MAGENTA);
+		getContentPane().setBackground(new Color(225,110,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -65,8 +65,8 @@ public class FrmCrudProveedor extends JInternalFrame implements MouseListener, A
 		getContentPane().setLayout(null);
 		
 		lblTitutlo = new JLabel("Mantenimiento Proveedor");
-		lblTitutlo.setFont(new Font("Bookman Old Style", Font.BOLD, 25));
-		lblTitutlo.setBounds(237, 11, 355, 54);
+		lblTitutlo.setFont(new Font("Arial", Font.BOLD, 30));
+		lblTitutlo.setBounds(299, 11, 416, 54);
 		getContentPane().add(lblTitutlo);
 		
 		lblNombre =  new JLabel("Nombre");
@@ -134,16 +134,19 @@ public class FrmCrudProveedor extends JInternalFrame implements MouseListener, A
 		getContentPane().add(cboPais);
 		
 		btnIngresar = new JButton("Ingresar");
+		btnIngresar.setBackground(new Color(92,105,205));
 		btnIngresar.addActionListener(this);
 		btnIngresar.setBounds(473, 120, 89, 23);
 		getContentPane().add(btnIngresar);
 		
 		btnActualizar = new JButton("Actualizar");
+		btnActualizar.setBackground(new Color(92,105,205));
 		btnActualizar.addActionListener(this);
 		btnActualizar.setBounds(473, 155, 89, 23);
 		getContentPane().add(btnActualizar);
 		
 		btnEliminar = new JButton("Eliminar");
+		btnEliminar.setBackground(new Color(92,105,205));
 		btnEliminar.addActionListener(this);
 		btnEliminar.setBounds(473, 189, 89, 23);
 		getContentPane().add(btnEliminar);
@@ -153,6 +156,7 @@ public class FrmCrudProveedor extends JInternalFrame implements MouseListener, A
 		getContentPane().add(scrollPane);
 		
 		table = new JTable();
+		table.setBackground(new Color(213,93,144));
 		table.addMouseListener(this);
 		table.setModel(new DefaultTableModel(
 				new Object[][] {
@@ -188,7 +192,7 @@ public class FrmCrudProveedor extends JInternalFrame implements MouseListener, A
 				scrollPane.setViewportView(table);
 				
 				//color de la fila seleccionada
-				table.setSelectionBackground(Color.GREEN);
+				table.setSelectionBackground(new Color( 255,228,225));
 				
 			    //No se pueda editar
 			    table.setDefaultEditor(Object.class, null);

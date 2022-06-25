@@ -38,73 +38,74 @@ public class FrmRegistroAutor extends JInternalFrame implements ActionListener {
 	
 
 	public FrmRegistroAutor() {
-		getContentPane().setBackground(Color.GREEN);
+		getContentPane().setBackground(new Color(126,225,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Ingreso de Autor");
-		setBounds(100, 100, 900, 550);
+		setBounds(100, 100, 574, 550);
 		getContentPane().setLayout(null);
 		
 		lblTitulo = new JLabel("Registro de Autor");
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblTitulo.setBounds(292, 21, 293, 27);
+		lblTitulo.setFont(new Font("Arial", Font.BOLD, 30));
+		lblTitulo.setBounds(108, 23, 300, 45);
 		getContentPane().add(lblTitulo);
 		
 		lblNombres = new JLabel("Nombres");
 		lblNombres.setFont(new Font("Tahoma", Font.PLAIN, 19));
-		lblNombres.setBounds(169, 92, 191, 19);
+		lblNombres.setBounds(23, 95, 191, 19);
 		getContentPane().add(lblNombres);
 		
 		lblApellidos = new JLabel("Apellidos");
 		lblApellidos.setFont(new Font("Tahoma", Font.PLAIN, 19));
-		lblApellidos.setBounds(169, 145, 191, 19);
+		lblApellidos.setBounds(23, 148, 191, 19);
 		getContentPane().add(lblApellidos);
 		
 		lblFechaNacimiento = new JLabel("Fecha de Nacimiento");
 		lblFechaNacimiento.setFont(new Font("Tahoma", Font.PLAIN, 19));
-		lblFechaNacimiento.setBounds(169, 202, 191, 19);
+		lblFechaNacimiento.setBounds(23, 205, 191, 19);
 		getContentPane().add(lblFechaNacimiento);
 		
 		lblPais = new JLabel("Pa\u00EDs");
 		lblPais.setFont(new Font("Tahoma", Font.PLAIN, 19));
-		lblPais.setBounds(169, 256, 191, 19);
+		lblPais.setBounds(23, 259, 191, 19);
 		getContentPane().add(lblPais);
 		
 		lblGrado = new JLabel("Grado");
 		lblGrado.setFont(new Font("Tahoma", Font.PLAIN, 19));
-		lblGrado.setBounds(169, 317, 191, 19);
+		lblGrado.setBounds(23, 320, 191, 19);
 		getContentPane().add(lblGrado);
 		
 		txtNombres = new JTextField();
 		txtNombres.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		txtNombres.setBounds(410, 81, 273, 30);
+		txtNombres.setBounds(264, 84, 273, 30);
 		getContentPane().add(txtNombres);
 		txtNombres.setColumns(10);
 		
 		txtApellidos = new JTextField();
 		txtApellidos.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		txtApellidos.setColumns(10);
-		txtApellidos.setBounds(410, 134, 273, 30);
+		txtApellidos.setBounds(264, 137, 273, 30);
 		getContentPane().add(txtApellidos);
 		
 		txtFechaNacimiento = new JTextField();
 		txtFechaNacimiento.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		txtFechaNacimiento.setColumns(10);
-		txtFechaNacimiento.setBounds(410, 191, 273, 30);
+		txtFechaNacimiento.setBounds(264, 194, 273, 30);
 		getContentPane().add(txtFechaNacimiento);
 		
 		btnRegistrar = new JButton("Registrar");
+		btnRegistrar.setBackground(new Color(0,201,255));
 		btnRegistrar.addActionListener(this);
 		btnRegistrar.setFont(new Font("Tahoma", Font.BOLD, 24));
-		btnRegistrar.setBounds(386, 379, 177, 66);
+		btnRegistrar.setBounds(182, 390, 177, 66);
 		getContentPane().add(btnRegistrar);
 		
 		cboPais = new JComboBox<String>();
 		cboPais.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		cboPais.setBounds(411, 254, 272, 30);
+		cboPais.setBounds(265, 257, 272, 30);
 		cboPais.addItem("[Seleccione]");
 		cboPais.addItem("Perú");
 		cboPais.addItem("Chile");
@@ -114,7 +115,7 @@ public class FrmRegistroAutor extends JInternalFrame implements ActionListener {
 		
 		cboGrado = new JComboBox<String>();
 		cboGrado.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		cboGrado.setBounds(411, 306, 272, 30);
+		cboGrado.setBounds(265, 309, 272, 30);
 		cboGrado.addItem("[Seleccione]");
 		cboGrado.addItem("Técnico");
 		cboGrado.addItem("Licenciado");

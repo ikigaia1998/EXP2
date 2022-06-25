@@ -40,74 +40,74 @@ public class FrmRegistroAlumno extends JInternalFrame implements ActionListener,
 	private JButton btnEnviar;
 
 	public FrmRegistroAlumno() {
-		getContentPane().setBackground(Color.RED);
+		getContentPane().setBackground(new Color(126,225,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Ingreso de Alumno");
-		setBounds(100, 100, 900, 550);
+		setBounds(100, 100, 585, 550);
 		getContentPane().setLayout(null);
 		
 		lblNewLabel = new JLabel("Registro de Alumno");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		lblNewLabel.setBounds(290, 40, 274, 58);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel.setBounds(93, 26, 314, 58);
 		getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("Nombres:");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_1.setBounds(171, 127, 170, 22);
+		lblNewLabel_1.setBounds(21, 112, 170, 22);
 		getContentPane().add(lblNewLabel_1);
 		
 		lblNewLabel_2 = new JLabel("Apellidos:");
 		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_2.setBounds(171, 177, 170, 22);
+		lblNewLabel_2.setBounds(21, 162, 170, 22);
 		getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("DNI:");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_3.setBounds(171, 222, 170, 22);
+		lblNewLabel_3.setBounds(21, 207, 170, 22);
 		getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_4 = new JLabel("Correo:");
 		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_4.setBounds(171, 268, 170, 22);
+		lblNewLabel_4.setBounds(21, 253, 170, 22);
 		getContentPane().add(lblNewLabel_4);
 		
 		lblNewLabel_5 = new JLabel("Pa\u00EDs:");
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_5.setBounds(171, 320, 170, 22);
+		lblNewLabel_5.setBounds(21, 305, 170, 22);
 		getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("Fecha de Nacimiento:");
 		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		lblNewLabel_6.setBounds(171, 367, 214, 22);
+		lblNewLabel_6.setBounds(21, 352, 214, 22);
 		getContentPane().add(lblNewLabel_6);
 		
 		txtNombres = new JTextField();
-		txtNombres.setBounds(386, 132, 296, 19);
+		txtNombres.setBounds(236, 117, 296, 19);
 		getContentPane().add(txtNombres);
 		txtNombres.setColumns(10);
 		
 		txtApellidos = new JTextField();
 		txtApellidos.setColumns(10);
-		txtApellidos.setBounds(386, 182, 296, 19);
+		txtApellidos.setBounds(236, 167, 296, 19);
 		getContentPane().add(txtApellidos);
 		
 		txtDni = new JTextField();
 		txtDni.addKeyListener(this);
 		txtDni.setColumns(10);
-		txtDni.setBounds(386, 227, 296, 19);
+		txtDni.setBounds(236, 212, 296, 19);
 		getContentPane().add(txtDni);
 		
 		txtCorreo = new JTextField();
 		txtCorreo.setColumns(10);
-		txtCorreo.setBounds(386, 273, 296, 19);
+		txtCorreo.setBounds(236, 258, 296, 19);
 		getContentPane().add(txtCorreo);
 		
 		txtFecha = new JTextField();
 		txtFecha.setColumns(10);
-		txtFecha.setBounds(386, 372, 296, 19);
+		txtFecha.setBounds(236, 357, 296, 19);
 		getContentPane().add(txtFecha);
 		
 		cboPais = new JComboBox<String>();
@@ -117,13 +117,14 @@ public class FrmRegistroAlumno extends JInternalFrame implements ActionListener,
 		cboPais.addItem("Ecuador");
 		cboPais.addItem("Colombia");
 		cboPais.addItem("Venezuela");
-		cboPais.setBounds(386, 324, 142, 21);
+		cboPais.setBounds(236, 309, 142, 21);
 		getContentPane().add(cboPais);
 		
 		btnEnviar = new JButton("Enviar");
+		btnEnviar.setBackground(new Color(0,201,255));
 		btnEnviar.addActionListener(this);
 		btnEnviar.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		btnEnviar.setBounds(345, 426, 142, 33);
+		btnEnviar.setBounds(166, 416, 142, 33);
 		getContentPane().add(btnEnviar);
 	}
 	public void actionPerformed(ActionEvent e) {

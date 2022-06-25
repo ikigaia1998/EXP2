@@ -22,6 +22,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.JComboBox;
 import java.awt.Color;
 import javax.swing.ImageIcon;
+import java.awt.Font;
 
 
 
@@ -38,16 +39,17 @@ public class FrmRegistroUsuario extends JInternalFrame implements ActionListener
 	private JTextField txtDireccion;
 	private JButton btnRegistrar;
 	private JComboBox<String> cboPais;
+	private JLabel lblNewLabel;
 
 	public FrmRegistroUsuario() {
 		setFrameIcon(new ImageIcon(FrmRegistroUsuario.class.getResource("/imgs/anadir.png")));
-		getContentPane().setBackground(Color.CYAN);
+		getContentPane().setBackground(new Color(126,225,110));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Ingreso de Usuario");
-		setBounds(100, 100, 900, 550);
+		setBounds(100, 100, 325, 440);
 		getContentPane().setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("Nombre");
@@ -60,76 +62,77 @@ public class FrmRegistroUsuario extends JInternalFrame implements ActionListener
 		txtNombre.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("Apellidos");
-		lblNewLabel_2.setBounds(65, 110, 73, 13);
+		lblNewLabel_2.setBounds(65, 95, 73, 13);
 		getContentPane().add(lblNewLabel_2);
 		
 		txtApellidos = new JTextField();
-		txtApellidos.setBounds(168, 107, 96, 19);
+		txtApellidos.setBounds(168, 92, 96, 19);
 		getContentPane().add(txtApellidos);
 		txtApellidos.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("DNI");
-		lblNewLabel_3.setBounds(65, 154, 45, 13);
+		lblNewLabel_3.setBounds(65, 122, 45, 13);
 		getContentPane().add(lblNewLabel_3);
 		
 		txtDNI = new JTextField();
 		txtDNI.addKeyListener(this);
-		txtDNI.setBounds(168, 151, 96, 19);
+		txtDNI.setBounds(168, 119, 96, 19);
 		getContentPane().add(txtDNI);
 		txtDNI.setColumns(10);
 		
 		JLabel lblNewLabel_4 = new JLabel("Login");
-		lblNewLabel_4.setBounds(65, 202, 45, 13);
+		lblNewLabel_4.setBounds(65, 149, 45, 13);
 		getContentPane().add(lblNewLabel_4);
 		
 		txtLogin = new JTextField();
-		txtLogin.setBounds(168, 199, 96, 19);
+		txtLogin.setBounds(168, 146, 96, 19);
 		getContentPane().add(txtLogin);
 		txtLogin.setColumns(10);
 		
 		JLabel lblNewLabel_5 = new JLabel("Password");
-		lblNewLabel_5.setBounds(65, 256, 45, 13);
+		lblNewLabel_5.setBounds(65, 176, 73, 13);
 		getContentPane().add(lblNewLabel_5);
 		
 		txtPasword = new JTextField();
-		txtPasword.setBounds(168, 253, 96, 19);
+		txtPasword.setBounds(168, 173, 96, 19);
 		getContentPane().add(txtPasword);
 		txtPasword.setColumns(10);
 		
 		JLabel lblNewLabel_6 = new JLabel("Correo");
-		lblNewLabel_6.setBounds(65, 302, 45, 13);
+		lblNewLabel_6.setBounds(65, 203, 45, 13);
 		getContentPane().add(lblNewLabel_6);
 		
 		txtCorreo = new JTextField();
-		txtCorreo.setBounds(168, 299, 96, 19);
+		txtCorreo.setBounds(168, 200, 96, 19);
 		getContentPane().add(txtCorreo);
 		txtCorreo.setColumns(10);
 		
 		JLabel lblNewLabel_8 = new JLabel("Nacimiento");
-		lblNewLabel_8.setBounds(65, 384, 55, 13);
+		lblNewLabel_8.setBounds(65, 230, 55, 13);
 		getContentPane().add(lblNewLabel_8);
 		
 		txtNacimiento = new JTextField();
-		txtNacimiento.setBounds(168, 381, 96, 19);
+		txtNacimiento.setBounds(168, 227, 96, 19);
 		getContentPane().add(txtNacimiento);
 		txtNacimiento.setColumns(10);
 		
 		JLabel lblNewLabel_9 = new JLabel("Direccion");
-		lblNewLabel_9.setBounds(65, 424, 55, 13);
+		lblNewLabel_9.setBounds(65, 257, 55, 13);
 		getContentPane().add(lblNewLabel_9);
 		
 		txtDireccion = new JTextField();
-		txtDireccion.setBounds(168, 421, 96, 19);
+		txtDireccion.setBounds(168, 254, 96, 19);
 		getContentPane().add(txtDireccion);
 		txtDireccion.setColumns(10);
 		
 		JLabel lblNewLabel_10 = new JLabel("Pais");
-		lblNewLabel_10.setBounds(65, 458, 45, 13);
+		lblNewLabel_10.setBounds(65, 281, 45, 13);
 		getContentPane().add(lblNewLabel_10);
 		
 		btnRegistrar = new JButton("Registrar");
+		btnRegistrar.setBackground(new Color(0,201,255));
 		btnRegistrar.addActionListener(this);
-		btnRegistrar.setBounds(378, 150, 108, 53);
+		btnRegistrar.setBounds(92, 335, 108, 53);
 		getContentPane().add(btnRegistrar);
 		
 		cboPais = new JComboBox<String>();
@@ -138,8 +141,13 @@ public class FrmRegistroUsuario extends JInternalFrame implements ActionListener
 		cboPais.addItem("Chile");
 		cboPais.addItem("Argentina");
 		cboPais.addItem("Colombia");
-		cboPais.setBounds(168, 450, 113, 21);
+		cboPais.setBounds(152, 281, 113, 21);
 		getContentPane().add(cboPais);
+		
+		lblNewLabel = new JLabel("Registrar Usuario");
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel.setBounds(10, 11, 302, 30);
+		getContentPane().add(lblNewLabel);
 		
 	
 	}

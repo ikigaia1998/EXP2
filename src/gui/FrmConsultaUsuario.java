@@ -34,77 +34,80 @@ public class FrmConsultaUsuario extends JInternalFrame implements ActionListener
 
 	public FrmConsultaUsuario() {
 		setFrameIcon(new ImageIcon(FrmConsultaUsuario.class.getResource("/imgs/documento.png")));
-		getContentPane().setBackground(Color.CYAN);
+		getContentPane().setBackground(new Color(23,175,174));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Consulta Usuario");
-		setBounds(100, 100, 1000, 550);
+		setBounds(100, 100, 955, 550);
 		getContentPane().setLayout(null);
 		
 		JLabel lblConsultaDeUsuario = new JLabel("Consulta de Usuario");
-		lblConsultaDeUsuario.setForeground(Color.BLUE);
+		lblConsultaDeUsuario.setForeground(Color.BLACK);
 		lblConsultaDeUsuario.setHorizontalAlignment(SwingConstants.CENTER);
-		lblConsultaDeUsuario.setFont(new Font("Arial Black", Font.ITALIC, 19));
+		lblConsultaDeUsuario.setFont(new Font("Arial", Font.BOLD, 30));
 		lblConsultaDeUsuario.setBounds(46, 10, 886, 48);
 		getContentPane().add(lblConsultaDeUsuario);
 		
 		JLabel lblNewLabel = new JLabel("Nombre");
-		lblNewLabel.setBounds(59, 127, 69, 14);
+		lblNewLabel.setBounds(46, 100, 69, 14);
 		getContentPane().add(lblNewLabel);
 		
 		txtNombre = new JTextField();
 		txtNombre.setColumns(10);
-		txtNombre.setBounds(156, 123, 149, 20);
+		txtNombre.setBounds(143, 96, 149, 20);
 		getContentPane().add(txtNombre);
 		
 		JLabel lblNewLabel_1 = new JLabel("DNI");
-		lblNewLabel_1.setBounds(59, 221, 46, 14);
+		lblNewLabel_1.setBounds(46, 166, 46, 14);
 		getContentPane().add(lblNewLabel_1);
 		
 		txtDNI = new JTextField();
 		txtDNI.setColumns(10);
-		txtDNI.setBounds(156, 219, 149, 20);
+		txtDNI.setBounds(143, 164, 149, 20);
 		getContentPane().add(txtDNI);
 		
 		JLabel lblApellido = new JLabel("Apellido");
-		lblApellido.setBounds(59, 172, 69, 14);
+		lblApellido.setBounds(46, 135, 69, 14);
 		getContentPane().add(lblApellido);
 		
 		txtApellido = new JTextField();
 		txtApellido.setColumns(10);
-		txtApellido.setBounds(156, 170, 149, 20);
+		txtApellido.setBounds(143, 133, 149, 20);
 		getContentPane().add(txtApellido);
 		
 		JLabel lblFechaDeInicio = new JLabel("Fecha de Inicio");
-		lblFechaDeInicio.setBounds(391, 215, 104, 20);
+		lblFechaDeInicio.setBounds(317, 100, 104, 20);
 		getContentPane().add(lblFechaDeInicio);
 		
 		txtInicio = new JTextField();
 		txtInicio.setColumns(10);
-		txtInicio.setBounds(488, 215, 149, 20);
+		txtInicio.setBounds(414, 100, 149, 20);
 		getContentPane().add(txtInicio);
 		
 		JLabel lblFechaDeFin = new JLabel("Fecha de Fin");
-		lblFechaDeFin.setBounds(712, 218, 85, 14);
+		lblFechaDeFin.setBounds(317, 136, 85, 14);
 		getContentPane().add(lblFechaDeFin);
 		
 		txtFin = new JTextField();
 		txtFin.setColumns(10);
-		txtFin.setBounds(807, 215, 149, 20);
+		txtFin.setBounds(412, 133, 149, 20);
 		getContentPane().add(txtFin);
 		
 		btnFiltrar = new JButton("Filtrar");
+		btnFiltrar.setBackground(new Color(152, 79, 151));
 		btnFiltrar.addActionListener(this);
-		btnFiltrar.setBounds(611, 116, 149, 37);
+		btnFiltrar.setBounds(756, 143, 149, 37);
 		getContentPane().add(btnFiltrar);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(46, 261, 912, 222);
+		scrollPane_1.setBounds(10, 195, 912, 314);
 		getContentPane().add(scrollPane_1);
 		
 		table = new JTable();
+		table.setSelectionBackground(new Color( 53,194,169));
+		table.setBackground(new Color(191,252,250));
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 			},

@@ -8,12 +8,12 @@ import javax.swing.border.TitledBorder;
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
-import java.awt.Graphics2D;
-import java.awt.Image;
+
+
 
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
-import javax.imageio.ImageIO;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JScrollPane;
@@ -25,13 +25,15 @@ import entidad.Alumno;
 import model.AlumnoModel;
 
 import java.awt.event.KeyListener;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+
+
+
 import java.util.List;
 import java.awt.event.KeyEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import javax.swing.border.EtchedBorder;
 
 public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, ActionListener {
 
@@ -53,9 +55,10 @@ public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, Ac
 	private JLabel lblDesde;
 	private JLabel lblHasta;
 	private JTextField txtHasta;
+	private JLabel lblNewLabel_1;
 
 	public FrmConsultaAlumno() {
-		getContentPane().setBackground(Color.RED);
+		getContentPane().setBackground(new Color(23,175,174));
 		setFrameIcon(new ImageIcon(FrmConsultaAlumno.class.getResource("/imgs/documento.png")));
 		getContentPane().setForeground(Color.RED);
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -63,37 +66,38 @@ public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, Ac
 		setIconifiable(true);
 		setClosable(true);
 		setTitle("Consulta Alumno");
-		setBounds(100, 100, 1133, 550);
+		setBounds(100, 100, 1133, 610);
 		getContentPane().setLayout(null);
 		
 		panel = new JPanel();
-		panel.setBorder(new TitledBorder(null, "Consulta", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(72, 61, 139)));
-		panel.setBounds(10, 10, 1090, 184);
+		panel.setBackground(new Color(23,175,174));
+		panel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "Consulta", TitledBorder.CENTER, TitledBorder.TOP, null, new Color(0, 0, 0)));
+		panel.setBounds(10, 59, 1090, 184);
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		lblNewLabel = new JLabel("Nombres:");
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 13));
 		lblNewLabel.setBounds(10, 59, 70, 13);
 		panel.add(lblNewLabel);
 		
 		lblApellidos = new JLabel("Apellidos:");
-		lblApellidos.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblApellidos.setFont(new Font("Arial", Font.PLAIN, 13));
 		lblApellidos.setBounds(10, 111, 70, 13);
 		panel.add(lblApellidos);
 		
 		lblDni = new JLabel("DNI:");
-		lblDni.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblDni.setFont(new Font("Arial", Font.PLAIN, 13));
 		lblDni.setBounds(388, 59, 45, 13);
 		panel.add(lblDni);
 		
 		lblPas = new JLabel("Pa\u00EDs:");
-		lblPas.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblPas.setFont(new Font("Arial", Font.PLAIN, 13));
 		lblPas.setBounds(388, 111, 45, 13);
 		panel.add(lblPas);
 		
 		lblFechaDeRegistro = new JLabel("Fecha de Registro:");
-		lblFechaDeRegistro.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblFechaDeRegistro.setFont(new Font("Arial", Font.PLAIN, 13));
 		lblFechaDeRegistro.setBounds(648, 85, 121, 13);
 		panel.add(lblFechaDeRegistro);
 		
@@ -131,18 +135,19 @@ public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, Ac
 
 		
 		btnConsultar = new JButton(" Consultar");
+		btnConsultar.setBackground(new Color(152, 79, 151));
 		btnConsultar.addActionListener(this);
-		btnConsultar.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnConsultar.setFont(new Font("Arial", Font.BOLD, 14));
 		btnConsultar.setBounds(423, 152, 165, 21);
 		panel.add(btnConsultar);
 		
 		lblDesde = new JLabel("Desde:");
-		lblDesde.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblDesde.setFont(new Font("Arial", Font.PLAIN, 12));
 		lblDesde.setBounds(848, 62, 45, 13);
 		panel.add(lblDesde);
 		
 		lblHasta = new JLabel("Hasta:");
-		lblHasta.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblHasta.setFont(new Font("Arial", Font.PLAIN, 12));
 		lblHasta.setBounds(848, 107, 45, 13);
 		panel.add(lblHasta);
 		
@@ -152,10 +157,12 @@ public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, Ac
 		panel.add(txtHasta);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(10, 204, 1084, 307);
+		scrollPane.setBackground(new Color(48,155,210));
+		scrollPane.setBounds(20, 254, 1084, 307);
 		getContentPane().add(scrollPane);
 		
 		tblConsulta = new JTable();
+		tblConsulta.setBackground(new Color(191,252,250));
 		tblConsulta.setModel(new DefaultTableModel(
 			new Object[][] {
 			},
@@ -185,7 +192,15 @@ public class FrmConsultaAlumno extends JInternalFrame implements KeyListener, Ac
 		
 		tblConsulta.setDefaultEditor(Object.class, null);
 		
-		tblConsulta.setSelectionBackground(Color.gray);
+		tblConsulta.setSelectionBackground(new Color(0,207,203));
+		
+		lblNewLabel_1 = new JLabel("Consulta Alumno");
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setForeground(Color.BLACK);
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel_1.setBackground(Color.WHITE);
+		lblNewLabel_1.setBounds(372, 11, 364, 37);
+		getContentPane().add(lblNewLabel_1);
 	}
 
 	public void mensaje(String ms) {

@@ -50,7 +50,7 @@ public class FrmConsultaLibro extends JInternalFrame implements ActionListener {
 
 	public FrmConsultaLibro() {
 		setFrameIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Book.gif")));
-		getContentPane().setBackground(new Color(250, 235, 215));
+		getContentPane().setBackground(new Color(23,175,174));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -60,49 +60,49 @@ public class FrmConsultaLibro extends JInternalFrame implements ActionListener {
 		getContentPane().setLayout(null);
 		
 		lblNewLabel = new JLabel("Consulta de Libro");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setBounds(334, 32, 218, 27);
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
+		lblNewLabel.setBounds(272, 34, 259, 27);
 		getContentPane().add(lblNewLabel);
 		
 		lblNewLabel_1 = new JLabel("T\u00EDtulo :");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_1.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Notes.gif")));
+		lblNewLabel_1.setFont(new Font("Arial", Font.PLAIN, 14));
+		
 		lblNewLabel_1.setBounds(74, 86, 75, 22);
 		getContentPane().add(lblNewLabel_1);
 		
 		lblNewLabel_2 = new JLabel("Anio de Inicio :");
-		lblNewLabel_2.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Add.gif")));
-		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_2.setBounds(74, 127, 121, 26);
 		getContentPane().add(lblNewLabel_2);
 		
 		lblNewLabel_3 = new JLabel("Categor\u00EDa :");
-		lblNewLabel_3.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Bar chart.gif")));
-		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_3.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_3.setBounds(74, 218, 97, 22);
 		getContentPane().add(lblNewLabel_3);
 		
 		lblNewLabel_7 = new JLabel("Serie :");
-		lblNewLabel_7.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Numbered list.gif")));
-		lblNewLabel_7.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_7.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_7.setBounds(479, 86, 72, 31);
 		getContentPane().add(lblNewLabel_7);
 		
 		lblNewLabel_5 = new JLabel("Pa\u00EDs :");
-		lblNewLabel_5.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Globe.gif")));
-		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_5.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_5.setBounds(479, 129, 81, 22);
 		getContentPane().add(lblNewLabel_5);
 		
 		lblNewLabel_6 = new JLabel("Tipo :");
-		lblNewLabel_6.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Notes.gif")));
-		lblNewLabel_6.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_6.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_6.setBounds(479, 175, 104, 24);
 		getContentPane().add(lblNewLabel_6);
 		
 		lblNewLabel_4 = new JLabel("Anio de Fin :");
-		lblNewLabel_4.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Add.gif")));
-		lblNewLabel_4.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		
+		lblNewLabel_4.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNewLabel_4.setBounds(74, 174, 111, 26);
 		getContentPane().add(lblNewLabel_4);
 		
@@ -167,6 +167,7 @@ public class FrmConsultaLibro extends JInternalFrame implements ActionListener {
 		getContentPane().add(scrollPane);
 		
 		table = new JTable();
+		table.setBackground(new Color(191,252,250));
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 			},
@@ -178,14 +179,16 @@ public class FrmConsultaLibro extends JInternalFrame implements ActionListener {
 		scrollPane.setViewportView(table);
 		
 		btnFiltro = new JButton("Filtro ");
+		btnFiltro.setBackground(new Color(152, 79, 151));
 		btnFiltro.addActionListener(this);
-		btnFiltro.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/Search.gif")));
+		
 		btnFiltro.setBounds(479, 218, 114, 34);
 		getContentPane().add(btnFiltro);
 		
 		btnLimpiar = new JButton("Limpiar");
+		btnLimpiar.setBackground(new Color(152, 79, 151));
 		btnLimpiar.addActionListener(this);
-		btnLimpiar.setIcon(new ImageIcon(FrmConsultaLibro.class.getResource("/iconos/limpieza-de-datos.png")));
+		
 		btnLimpiar.setBounds(691, 218, 114, 34);
 		getContentPane().add(btnLimpiar);
 		
