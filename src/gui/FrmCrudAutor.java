@@ -56,7 +56,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 	int hoveredRow = -1, hoveredColumn = -1;
 
 	public FrmCrudAutor() {
-		getContentPane().setBackground(Color.GREEN);
+		getContentPane().setBackground(new Color(48,155,210));
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setMaximizable(true);
 		setIconifiable(true);
@@ -66,12 +66,12 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().setLayout(null);
 
 		lblTitulo = new JLabel("Mantenimiento de Autor");
-		lblTitulo.setFont(new Font("Tahoma", Font.BOLD, 20));
-		lblTitulo.setBounds(306, 11, 246, 33);
+		lblTitulo.setFont(new Font("Arial", Font.BOLD, 30));
+		lblTitulo.setBounds(306, 11, 376, 33);
 		getContentPane().add(lblTitulo);
 
 		lblNombres = new JLabel("Nombres");
-		lblNombres.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNombres.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblNombres.setBounds(43, 71, 91, 19);
 		getContentPane().add(lblNombres);
 
@@ -82,7 +82,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		txtNombres.setColumns(10);
 
 		lblApellidos = new JLabel("Apellidos");
-		lblApellidos.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblApellidos.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblApellidos.setBounds(501, 71, 91, 19);
 		getContentPane().add(lblApellidos);
 
@@ -93,7 +93,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(txtApellidos);
 
 		lblFechaNacimiento = new JLabel("Fecha de nacimiento");
-		lblFechaNacimiento.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblFechaNacimiento.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblFechaNacimiento.setBounds(43, 114, 156, 19);
 		getContentPane().add(lblFechaNacimiento);
 
@@ -104,7 +104,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(txtFechaNacimiento);
 
 		lblPais = new JLabel("Pa\u00EDs");
-		lblPais.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblPais.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblPais.setBounds(380, 113, 61, 19);
 		getContentPane().add(lblPais);
 
@@ -115,7 +115,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(cboPais);
 
 		lblGrado = new JLabel("Grado");
-		lblGrado.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblGrado.setFont(new Font("Arial", Font.PLAIN, 14));
 		lblGrado.setBounds(605, 115, 61, 19);
 		getContentPane().add(lblGrado);
 
@@ -127,28 +127,33 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		getContentPane().add(cboGrado);
 
 		btnIngresar = new JButton("Ingresar");
+		btnIngresar.setBackground(new Color(164, 49, 112));
 		btnIngresar.addActionListener(this);
-		btnIngresar.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnIngresar.setBounds(209, 155, 130, 40);
+		btnIngresar.setFont(new Font("Arial", Font.PLAIN, 14));
+		btnIngresar.setBounds(209, 162, 130, 33);
 		getContentPane().add(btnIngresar);
 
 		btnActualizar = new JButton("Actualizar");
+		btnActualizar.setBackground(new Color(164, 49, 112));
 		btnActualizar.addActionListener(this);
-		btnActualizar.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnActualizar.setBounds(380, 155, 130, 40);
+		btnActualizar.setFont(new Font("Arial", Font.PLAIN, 14));
+		btnActualizar.setBounds(380, 162, 130, 33);
 		getContentPane().add(btnActualizar);
 
 		btnEliminar = new JButton("Eliminar");
+		btnEliminar.setBackground(new Color(164, 49, 112));
 		btnEliminar.addActionListener(this);
-		btnEliminar.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnEliminar.setBounds(552, 155, 130, 40);
+		btnEliminar.setFont(new Font("Arial", Font.PLAIN, 14));
+		btnEliminar.setBounds(552, 162, 130, 33);
 		getContentPane().add(btnEliminar);
 
 		scrollPane = new JScrollPane();
+		scrollPane.setBackground(new Color(206,246,255));
 		scrollPane.setBounds(43, 206, 801, 292);
 		getContentPane().add(scrollPane);
 
 		tblAutor = new JTable();
+		tblAutor.setBackground(new Color(0,207,203));
 		tblAutor.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		tblAutor.setModel(new DefaultTableModel(
 			new Object[][] {
@@ -174,7 +179,7 @@ public class FrmCrudAutor extends JInternalFrame implements ActionListener, Mous
 		// No permite editar desde la tabla
 		tblAutor.setDefaultEditor(Object.class, null);
 		// Color de la fila seleccionada
-		tblAutor.setSelectionBackground(Color.GRAY);
+		tblAutor.setSelectionBackground(new Color(0, 207, 203));
 		
 		// Poner un tamaño a las columnas 
 		tblAutor.getColumnModel().getColumn(0).setPreferredWidth(70);

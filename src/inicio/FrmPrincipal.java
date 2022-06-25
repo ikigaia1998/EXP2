@@ -126,28 +126,33 @@ public class FrmPrincipal extends JFrame implements WindowListener, ActionListen
 		this.setResizable(false);
 
 		desktop.setSize(1000, 500);
-		desktop.setBackground(new Color(44, 62, 80));
+		desktop.setBackground(new Color(0, 51, 102));
 
 		getContentPane().add(desktop, BorderLayout.CENTER);
 
 		addWindowListener(this);
 
 		JMenuBar menuBar = new JMenuBar();
+		menuBar.setBackground(new Color(102, 255, 255));
 		setJMenuBar(menuBar);
 
 		JMenu mnAdministracin = new JMenu("Registros (PC1)");
+		mnAdministracin.setBackground(new Color(153, 255, 255));
 		mnAdministracin.setVisible(false);
 		menuBar.add(mnAdministracin);
 
 		JMenu mnCrud = new JMenu("Crud (PC02)");
+		mnCrud.setBackground(new Color(153, 255, 255));
 		mnCrud.setVisible(false);
 		menuBar.add(mnCrud);
 
 		JMenu mnConsultas = new JMenu("Consulta (PC03)");
+		mnConsultas.setBackground(new Color(102, 255, 255));
 		mnConsultas.setVisible(false);
 		menuBar.add(mnConsultas);
 
 		JMenu mnReporte = new JMenu("Reporte (PC03)");
+		mnReporte.setBackground(new Color(102, 255, 255));
 		mnReporte.setVisible(false);
 		menuBar.add(mnReporte);
 
@@ -352,7 +357,8 @@ public class FrmPrincipal extends JFrame implements WindowListener, ActionListen
 			//FlatLightLaf.setup();
 			//UIManager.setLookAndFeel("com.formdev.flatlaf.FlatLightLaf");
 			//UIManager.setLookAndFeel("com.formdev.flatlaf.FlatIntelliJLaf");
-			UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
+			//UIManager.setLookAndFeel("com.jtattoo.plaf.acryl.AcrylLookAndFeel");
+			UIManager.setLookAndFeel("com.jtattoo.plaf.mcwin.McWinLookAndFeel");
 
 			FrmPrincipal jf = new FrmPrincipal("Sistema de gestión de biblioteca", 900, 600);
 			jf.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

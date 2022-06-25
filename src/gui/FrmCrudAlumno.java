@@ -65,6 +65,7 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 	
 
 	public FrmCrudAlumno() {
+		getContentPane().setBackground(new Color(48, 155, 210));
 		
 		
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -79,38 +80,38 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setBackground(Color.WHITE);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setFont(new Font("Dialog", Font.BOLD, 30));
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 30));
 		lblNewLabel.setBounds(254, 10, 364, 37);
 		getContentPane().add(lblNewLabel);
 		
 		lblNombres = new JLabel("Nombres:");
-		lblNombres.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblNombres.setFont(new Font("Arial", Font.BOLD, 12));
 		lblNombres.setBounds(28, 77, 104, 13);
 		getContentPane().add(lblNombres);
 		
 		lblApellidos = new JLabel("Apellidos:");
-		lblApellidos.setFont(new Font("Dialog", Font.BOLD, 12));
-		lblApellidos.setBounds(28, 124, 104, 13);
+		lblApellidos.setFont(new Font("Arial", Font.BOLD, 12));
+		lblApellidos.setBounds(28, 101, 104, 13);
 		getContentPane().add(lblApellidos);
 		
 		lblDni = new JLabel("DNI:");
-		lblDni.setFont(new Font("Dialog", Font.BOLD, 12));
-		lblDni.setBounds(28, 182, 104, 13);
+		lblDni.setFont(new Font("Arial", Font.BOLD, 12));
+		lblDni.setBounds(28, 125, 104, 13);
 		getContentPane().add(lblDni);
 		
 		lblCorreo = new JLabel("Correo:");
-		lblCorreo.setFont(new Font("Dialog", Font.BOLD, 12));
+		lblCorreo.setFont(new Font("Arial", Font.BOLD, 12));
 		lblCorreo.setBounds(433, 77, 115, 13);
 		getContentPane().add(lblCorreo);
 		
 		lblFechaDeNac = new JLabel("Fecha de nacimiento :");
-		lblFechaDeNac.setFont(new Font("Dialog", Font.BOLD, 12));
-		lblFechaDeNac.setBounds(433, 124, 153, 13);
+		lblFechaDeNac.setFont(new Font("Arial", Font.BOLD, 12));
+		lblFechaDeNac.setBounds(433, 103, 153, 13);
 		getContentPane().add(lblFechaDeNac);
 		
 		lblPas = new JLabel("Pa\u00EDs:");
-		lblPas.setFont(new Font("Dialog", Font.BOLD, 12));
-		lblPas.setBounds(433, 182, 115, 13);
+		lblPas.setFont(new Font("Arial", Font.BOLD, 12));
+		lblPas.setBounds(433, 130, 115, 13);
 		getContentPane().add(lblPas);
 		
 		txtNombre = new JTextField();
@@ -120,13 +121,13 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		
 		txtApellido = new JTextField();
 		txtApellido.setColumns(10);
-		txtApellido.setBounds(117, 124, 292, 19);
+		txtApellido.setBounds(117, 101, 292, 19);
 		getContentPane().add(txtApellido);
 		
 		txtDNI = new JTextField();
 		txtDNI.addKeyListener(this);
 		txtDNI.setColumns(10);
-		txtDNI.setBounds(117, 182, 115, 19);
+		txtDNI.setBounds(117, 125, 115, 19);
 		getContentPane().add(txtDNI);
 		
 		txtCorreo = new JTextField();
@@ -136,7 +137,7 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		
 		txtFecha = new JTextField();
 		txtFecha.setColumns(10);
-		txtFecha.setBounds(596, 122, 124, 19);
+		txtFecha.setBounds(596, 101, 124, 19);
 		getContentPane().add(txtFecha);
 		
 		cboPais = new JComboBox<String>();
@@ -146,26 +147,29 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		cboPais.addItem("Ecuador");
 		cboPais.addItem("Colombia");
 		cboPais.addItem("Venezuela");
-		cboPais.setBounds(599, 179, 121, 21);
+		cboPais.setBounds(596, 126, 121, 21);
 		getContentPane().add(cboPais);
 		
 		btnAdd = new JButton("A\u00F1adir");
+		btnAdd.setBackground(new Color(164, 49, 112));
 		btnAdd.addActionListener(this);
-		btnAdd.setFont(new Font("Dialog", Font.PLAIN, 12));
-		btnAdd.setBounds(117, 234, 149, 32);
+		btnAdd.setFont(new Font("Arial", Font.PLAIN, 12));
+		btnAdd.setBounds(117, 180, 149, 32);
 		getContentPane().add(btnAdd);
 		
 		btnModificar = new JButton("Modificar");
+		btnModificar.setBackground(new Color(164, 49, 112));
 		btnModificar.addActionListener(this);
-		btnModificar.setFont(new Font("Dialog", Font.PLAIN, 12));
-		btnModificar.setBounds(373, 234, 149, 32);
+		btnModificar.setFont(new Font("Arial", Font.PLAIN, 12));
+		btnModificar.setBounds(371, 180, 149, 32);
 		getContentPane().add(btnModificar);
 		
 		btnEliminar = new JButton("Eliminar");
+		btnEliminar.setBackground(new Color(164, 49, 112));
 		btnEliminar.addMouseListener(this);
 		btnEliminar.addActionListener(this);
-		btnEliminar.setFont(new Font("Dialog", Font.PLAIN, 12));
-		btnEliminar.setBounds(627, 234, 149, 32);
+		btnEliminar.setFont(new Font("Arial", Font.PLAIN, 12));
+		btnEliminar.setBounds(627, 180, 149, 32);
 		getContentPane().add(btnEliminar);
 		
 		scrollPane = new JScrollPane();
@@ -173,6 +177,7 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		getContentPane().add(scrollPane);
 		
 		table = new JTable();
+		table.setBackground(new Color(206, 246,255));
 		table.addMouseMotionListener(this);
 		table.addMouseListener(this);
 		table.setModel(new DefaultTableModel(
@@ -207,10 +212,10 @@ public class FrmCrudAlumno extends JInternalFrame implements ActionListener, Mou
 		
 		table.setDefaultEditor(Object.class, null);
 		
-		table.setSelectionBackground(Color.blue);
+		table.setSelectionBackground(new Color(0, 207, 203));
 		
 		panel = new JPanel();
-		panel.setBackground(new Color(211, 211, 211));
+		panel.setBackground(new Color(48, 155, 210));
 		panel.setBounds(99, 10, 677, 37);
 		getContentPane().add(panel);
 		
